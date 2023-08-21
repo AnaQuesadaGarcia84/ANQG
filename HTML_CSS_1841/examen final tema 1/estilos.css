@@ -1,0 +1,180 @@
+/* Colores del documento
+Prinicpal: #114358
+Complementario: #F2AA1F
+Segundo complementario: #F1ECE7
+Color oscuro: #090909
+Color claro: #FFFFFF
+*/
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+/*Estilos del header*/
+header, footer{
+    display: flex;
+    padding: 1.5em;
+    background-color: #114358;
+    justify-content: space-between;
+}
+
+header ul{   
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+ul a:link{
+    text-decoration: none;
+}
+
+ li{
+    display: inline;
+    padding-right: 1.5em;
+    color: #F2AA1F;
+}
+
+li a{
+    display: inline;
+    padding-right: 1.5em;
+    color: #F2AA1F;
+}
+
+a li:hover{
+    color: #ffffff;
+}
+
+/*Estilos de la sección anuncio*/
+.anuncio{
+    text-align: center;
+    padding: 3em;
+    background-image: url(media/bosque4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+.anuncio h1{
+    font-size: 5em;
+    font-family: 'Tangerine', cursive;
+}
+
+/*Estilos de la sección productos*/
+.productos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8em;
+}
+
+.eslogan{
+    margin-top: 1.8em;
+    text-align: center;
+    font-family: 'Tangerine', cursive;
+    font-size: 4em;
+}
+
+h2{
+    font-family: 'Tangerine', cursive;
+    font-size: 2.8em;
+}
+.transparente{
+    background-color: #ffffff74;
+    background-size: cover;
+    padding: 1.7em;
+
+}
+.hada1, .hada2, .hada3{
+    text-align: center;
+    color: black;
+}
+.hada1{
+    background-image: url(media/hada1.png);
+    background-size: cover;
+}
+.hada2{
+    background-image: url(media/hada3.png);
+}
+.hada3{
+    background-image: url(media/hada2.png);
+}
+
+/*Estilos de la seccion elige tu hada*/
+.elige{
+    padding: 1.7em;
+    text-align: center;
+}
+
+/*Estilos footer 2*/
+footer ul{   
+    list-style: none;
+    text-decoration: none;
+    align-items: center;
+}
+
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li a:hover{
+    color: #ffffff;
+}
+
+/*Estilos del body de contacto*/
+.contacto{
+    background-image: url(media/bosque2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contacto div, .login div, .registro div{
+    background-color: #ffffff52;
+    display: flex;
+    align-items: center;
+}
+.contacto section, .login section, .registro section{
+    width: 50%;
+}
+
+.imagen{
+    text-align: center;
+}
+
+input, textarea{
+    width: 60%;
+    padding: 1.5em;
+    border-radius: 0.5em;
+    margin-top: 0.3em;
+}
+
+button{
+    margin-top: 0.3em;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    background-color: #114358;
+    color: #F2AA1F;
+    font-size: 1.2em;
+}
+button:hover{
+    box-shadow: #000000 2px 2px 2px;
+}
+
+/*Estilos del body de login*/
+.login{
+    background-image: url(media/bosque.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Estilos del body de registro*/
+.registro{
+    background-image: url(media/bosque4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

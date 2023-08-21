@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Creamos una grid para tener la aperiencia deseada*/
+.contenedor{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-image: url(media/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.aside1, .aside2, .cuerpo, .cuerpo2, .footer{
+    padding: 1.5em;
+}
+
+.navegador, .footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #00214A;
+    text-align: center;
+    color: white;
+}
+
+.aside1{
+	grid-row-start:2;
+    grid-row-end:3;
+    background-color: #0D3F7C;
+    text-align: center;
+    color: white;
+}
+.aside2{
+	grid-row-start:3;
+    grid-row-end:4;
+    background-color: #0D3F7C;
+    text-align: center;
+    color: white;
+}
+.cuerpo{
+	grid-column-start:2;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+.cuerpo2{
+	grid-column-start:2;
+    grid-column-end: 4;
+    grid-row-start:3;
+    grid-row-end:4;
+}
+
+/*Formatos del navegador*/
+.navegador{
+    display: flex;
+    padding: 0.5em;
+}
+ .navegador img{
+    width: 5%;
+    padding-left: 3em;
+    padding: 0.5em;
+ }
+
+nav{
+    width: 95%;
+    padding: 0.5em;
+    font-size: 1.3em;
+    
+}
+nav ul{
+    list-style: none;
+    
+}
+nav ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin-left: 1em;
+}
+
+/*Formatos del formulario*/
+form{
+    text-align: center;
+    display: flex;
+}
+
+.inputs{
+    width: 50%;
+}
+input{
+    width: 80%;
+    margin-top: 0.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.textMensa{
+    width: 50%;
+}
+
+textarea{
+    width: 80%;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.enviar{
+    width: 83%;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    background-color: #00214A;
+    color: white;
+}
+
+.enviar:hover{
+    box-shadow: 3px 3px 3px black;
+    background-color: #004ead;
+    cursor:pointer;
+}
+
+/*Estilos de la imagen ASIDE*/
+.aside2 img{
+    width: 80%;
+}
+
+/*Estilo de los botones*/
+.boton{
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0.5em;
+    background-color: #00214A;
+    color: white;
+}
+
+.boton:hover{
+    box-shadow: 3px 3px 3px black;
+    background-color: #004ead;
+    cursor:pointer;
+}
+

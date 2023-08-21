@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Creamos una grid para tener la aperiencia deseada*/
+.contenedor{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.aside1, .aside2, .cuerpo, .cuerpo2, .footer{
+    padding: 1.5em;
+}
+
+.navegador, .footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #00214A;
+    text-align: center;
+    color: white;
+}
+
+.aside1{
+    grid-row-start: 2;
+    grid-row-end:3;
+    background-color: #0D3F7C;
+    color: white;
+    text-align: center;
+}
+.aside2{
+	grid-row-start:3;
+    grid-row-end:4;
+    background-color: #0D3F7C;
+    color: white;
+    text-align: center;
+}
+.cuerpo{
+    grid-column-start:2;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end:4;
+    text-align: center;
+}
+
+/*Formatos del navegador*/
+.navegador{
+    display: flex;
+    padding: 0.5em;
+
+}
+.logo{
+    width: 150px;
+}
+ .navegador img{
+    width: 5%;
+    padding-left: 3em;
+    padding: 0.5em;
+ }
+
+nav{
+    width: 95%;
+    padding: 0.5em;
+    font-size: 1.3em;
+    
+}
+nav ul{
+    list-style: none;
+    
+}
+nav ul a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    margin-left: 1em;
+}
+
+/*Estilo de los botones*/
+.boton{
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0.5em;
+    background-color: #00214A;
+    color: white;
+}
+
+.boton:hover{
+    box-shadow: 3px 3px 3px black;
+    background-color: #004ead;
+    cursor:pointer;
+}
+
+input{
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 55%;
+    margin-top: 0.5em;
+}
+
+/*Estilos de la imagen ASIDE*/
+.aside2 img{
+    width: 100%;
+}
+
+/*Estilos del cuerpo de CURSOS*/
+.curso{
+    background-image: url(media/imagen-fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.2em;
+}
+
+.curso video{
+    width: 50%;
+    border-radius: 0.5em;
+}
+
+

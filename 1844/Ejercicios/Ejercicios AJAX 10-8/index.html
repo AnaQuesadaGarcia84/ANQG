@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Librerías de JQUERY-->
+    <script src="JQuery/jquery/jquery-3.7.0.min.js"></script>
+    <script src="JQuery/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+    
+    <!--Link a CSS personal-->
+    <link rel="stylesheet" href="CSS/stilos.css">
+
+    <!--Archivos de JS personal-->
+    <script src="JS/js.js"></script>
+
+</head>
+<body>
+    <h1>Regístrate en nuestra web</h1>
+    <form action="https://reqres.in/api/users" method="post" id="formulario">
+        <input type="text" name="codigo" id="codigo" placeholder="Código"><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"><br>
+        <input type="mail" name="mail" id="mail" placeholder="E-mail"><br>
+        <input type="number" name="edad" id="edad" placeholder="Edad"><br>
+        <input type="text" name="fotografia" id="fotografia" placeholder="Fotografía"><br>
+        <input type="submit" value="Enviar" id="enviar">
+    </form>
+
+    <div id="mostrar"></div>
+    
+</body>
+</html>

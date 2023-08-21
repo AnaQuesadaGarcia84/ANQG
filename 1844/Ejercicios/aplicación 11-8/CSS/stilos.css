@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+header{
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    background-color: #e2f3f9;
+}
+
+ nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+ }
+
+ nav button{
+    margin-right: 0.5em;
+    padding: 1em;
+    border-radius: 0.3em;
+    background-color: lightblue;
+    border: lightblue;
+    font-size: 1em;
+    color: #003366;
+    font-weight: bold;
+ }
+
+ nav button:hover, .iniciar:hover, .accede:hover{
+    background-color: #003366;
+    border: #003366;
+    color: lightblue;
+    box-shadow: #7dadbd 4px 4px 4px;
+    cursor: pointer;
+ }
+
+ .publi{
+    background-color: rgb(226, 243, 249);
+    padding: 1.3em;
+ }
+
+ .eslogan{
+    color: #003366;
+    font-family: 'Tangerine', cursive;
+    font-size: 4em;
+}
+
+.cuerpo{
+    display: flex;
+}
+
+.aside{
+    width: 30%;
+    padding: 1.5em;
+}
+
+.titulo{
+    background-color: #003366;
+    color: white;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    border-radius: 0.3em;
+}
+
+.acordeon{
+    background-color: lightblue;
+    padding: 0.5em;
+    border-radius: 0.3em;
+}
+
+
+.contenido{
+    width: 70%;
+    padding: 1.5em;
+}
+
+footer{
+    background-color: lightblue;
+    padding: 2em;
+}
+
+footer ul, .curso ul{
+    list-style: none;
+}
+
+footer ul li{
+    display: inline;
+}
+
+footer ul li a{
+    color: #003366;
+    text-decoration: none;
+    margin-left: 0.5em;
+}
+
+/* Estilos del inicio de sesión */
+.inicio, .registro, .nosotros{
+    margin-top: 1em;
+}
+input{
+    width: 30%;
+    margin-top: 0.5em;
+    padding: 0.8em;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+.iniciar{
+    background-color: lightblue;
+    border: lightblue 2px;
+    color: #003366;
+    font-weight: bold;
+    width: 31.5%;
+}
+
+/* Estilos del Sobre nosotros */
+.nosotros{
+    padding: 1em;
+}
+
+/* Estilos de curso */
+.cursoImg{
+    width: 30%;
+    margin: auto;
+    display: block;
+}
+
+
+/* Estilos de contacto */
+.textarea{
+    margin-top: 0.5em;
+    width: 31.5%;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+/* Estilos H2 */
+h2{
+    text-align: center;
+}
+
+/* Estilos del botón alto contraste */
+.contraste{
+    background-color: #003366;
+    border: #003366 2px;
+    color: lightblue;
+    font-weight: bold;
+    width: 31.5%;
+}
+
+.contraste:hover{
+    background-color: black;
+    border: black 2px;
+    color: white;
+    box-shadow: #7dadbd 3px 3px 3px;
+}
+

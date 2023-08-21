@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumnos</title>
+    <style>
+        body{text-align: center;}
+        input, select{padding: 0.3em;
+            border-radius:0.3em;
+            margin-top: 0.3em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario alumnos</h1>
+    <form action="" name="formulario">
+        <input type="text" name="codigo" id="codigo" placeholder="Código"><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellidos"><br>
+        <input type="number" name="edad" id="edad" placeholder="Edad"><br>
+        <input type="email" name="mail" id="mail" placeholder="E-mail"><br>
+        <input type="tel" name="telefono" id="telefono" placeholder="Teléfono"><br>
+        <select name="lenguaje" id="lenguaje">
+            <option value="html">HTML</option>
+            <option value="css">CSS3</option>
+            <option value="javascript">JavaScript</option>
+        </select><br>
+        <input id="validar" type="button" value="Enviar" >
+    </form>
+    <div id="mostrar"></div>
+    <script src="ejercicio19.js"></script>
+</body>
+</html>

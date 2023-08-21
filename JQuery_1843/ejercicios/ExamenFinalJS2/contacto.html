@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="navegador">
+            <img src="media/logo.png" alt="Logo">
+            <nav>
+                <ul>
+                    <a href="index.html"><li>Inicio</li></a>
+                    <a href="curso.html"><li>Curso</li></a>
+                    <a href="contacto.html"><li><b>Contacto</b></li></a>
+                </ul>
+            </nav>
+        </div>
+        <div class="aside1">
+            <h3>Nombre usuario</h3>
+            <p>Rol</p>
+        </div>
+        <div class="aside2">
+            <img src="media/cursohtml.jpg" alt="HTML5+CSS3">
+            <h4>Curso HTML5 y CSS3</h4><br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi laborum tempore in voluptate autem explicabo provident possimus nihil at. Ab eos quisquam ratione. Adipisci nisi consequatur corporis ducimus placeat unde.</p>
+            <button class="boton">Reservar plaza</button>
+        </div>
+        <div class="contenido">
+            <h1>Contacta con nosotros</h1>
+            <form action="">
+                <div class="inputs">
+                    <input type="text" id="nombre" class="nombre" placeholder="Nombre"><br>
+                    <input type="text" id="mail" class="mail" placeholder="E-mail"><br>
+                    <input type="text" id="asunto" class="asunto" placeholder="Asunto"><br>
+                </div>
+                <div class="textMensa">
+                    <textarea name="" id="mensaje" cols="20" rows="7" placeholder="Ingresa tu mensaje"></textarea><br>
+                    <!--button id="enviar" class="enviar">Enviar</button-->
+                    <input id="validar" class="enviar" type="button" value="Enviar">
+                </div>
+            </form>
+        </div>
+        <div class="contenido2">
+            <p>Texto legal</p>
+        </div>
+        <div class="footer">
+            <p>&#169 Todos los derechos reservados</p>
+        </div>
+        <div id="mostrar"></div>
+    </div>
+    <script src="funcionalidad.js"></script>
+</body>
+</html>

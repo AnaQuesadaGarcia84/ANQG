@@ -1,0 +1,189 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navegador,.aside1, .aside2, .contenido,footer{
+    padding: 1.5em;
+}
+
+/*Formatos del navegador*/
+.navegador, footer {
+    background-color: #00214A;
+    color: white;
+}
+
+.navegador{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+
+.logo{
+    width: 150px;
+}
+.navegador img{   
+    padding-left: 3em;
+    padding: 0.5em;
+    width: 5%;
+}
+
+nav{
+    padding: 0.5em;   
+}
+
+nav ul{
+    list-style: none;
+    align-items: end;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li button{
+    
+    border: none;
+    color: white;
+    margin-left: 1em;
+    font-size: 1.5em;
+    background-color: #2972cc00; 
+    padding: 1em;
+}
+
+nav button:hover{
+    background-color: #012b5e;
+    border-radius: 0.5em;   
+}
+
+/*Estilos que nos divide el contenido entre el 
+aside y el resto del contenido*/
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asides{
+    width: 25%;
+    background-color: #0D3F7C;
+    color: white;
+    text-align: center;
+}
+
+.cuerpo{
+    width: 75%;
+    text-align: center;
+    background-image: url(media/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Estilo de los botones*/
+.boton{
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 30%;
+    font-weight: bold;
+    margin-top: 0.5em;
+    background-color: #00214A;
+    color: white;
+}
+
+.boton:hover{
+    box-shadow: 3px 3px 3px black;
+    background-color: #004ead;
+    cursor:pointer;
+}
+
+input{
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 55%;
+    margin-top: 0.5em;
+}
+
+/*Estilos de la imagen ASIDE*/
+.aside2 img{
+    width: 100%;
+}
+
+/*Estilos del cuerpo de CURSOS*/
+.curso{
+    background-image: url(media/imagen-fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.curso video{
+    width: 50%;
+    border-radius: 0.5em;
+}
+
+/*Formatos del formulario*/
+form{
+    text-align: center;
+    display: flex;
+    margin-top: 1em;
+}
+
+.inputs{
+    width: 50%;
+}
+input{
+    width: 80%;
+    margin-top: 0.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.textMensa{
+    width: 50%;
+}
+
+textarea{
+    width: 80%;
+    border-radius: 0.5em;
+    padding: 0.5em;
+}
+
+.enviar{
+    width: 83%;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    background-color: #00214A;
+    color: white;
+}
+
+.enviar:hover{
+    box-shadow: 3px 3px 3px black;
+    background-color: #004ead;
+    cursor:pointer;
+}
+
+footer{
+    text-align: center;
+}
+
+
+/* Ventana modal */
+.profesorEmergente{
+    background-color: #186dd5;
+    color: black;
+    position: fixed;
+    width: 40%;
+    top: 40%;
+    left: 40%;
+    visibility: hidden;
+    padding: 1.5em;
+    border-radius: 0.8em;
+}
+
+.profesorEmergente.active{
+    visibility: visible;
+    z-index: 2;
+}
+
