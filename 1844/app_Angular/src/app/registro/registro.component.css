@@ -1,0 +1,34 @@
+.registro{
+    text-align: center;
+}
+
+.registro h2{
+    text-decoration: underline;
+}
+
+input{
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    margin-top: 0.3em;
+    width: 30%;
+    font-size: 1em;
+}
+
+button{
+    padding: 0.5em;
+    margin-top: 0.3em;
+    width: 31%;
+    font-weight: bolder;
+    background-color: #0D3F7D;
+    color: white;
+    border-radius: 0.3em;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color: #a4fdf7;
+    box-shadow: 5px 5px 5px #00214A;
+    color: #0D3F7D;
+    font-weight: bolder;
+}

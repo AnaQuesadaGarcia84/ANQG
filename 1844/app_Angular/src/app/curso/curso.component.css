@@ -1,0 +1,19 @@
+.curso{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1.5em;
+}
+
+.curso h2{
+    background-color: #00214A;
+    color: white;
+    padding: 0.5em;
+}
+
+.curso img{
+    width: 25%;
+}
+
+.curso ul{
+    list-style: none;
+}

@@ -4,11 +4,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { CursoComponent } from './curso/curso.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { ProfesorComponent } from './profesor/profesor.component';
+import { AccesoComponent } from './acceso/acceso.component';
+import { RegistroComponent } from './registro/registro.component';
+import { ConsultaComponent } from './consulta/consulta.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
+import { AlumnoComponent } from './alumno/alumno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CursosComponent
+    CursosComponent,
+    CursoComponent,
+    ProfesoresComponent,
+    ProfesorComponent,
+    AccesoComponent,
+    RegistroComponent,
+    ConsultaComponent,
+    AlumnosComponent,
+    AlumnoComponent
   ],
   imports: [
     BrowserModule,
