@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { profesorBase, profesoresBase } from '../modelos/profesor';
 
 @Component({
   selector: 'app-profesor',
@@ -6,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./profesor.component.css']
 })
 export class ProfesorComponent {
-  public imagen:string
+  // public  profesoresAll:Array<profesoresBase>
   
   constructor(){
-    this.imagen = 'https://thecatapi.com/api/images/get?format=src&type=gif?results_per_page='
+    
   }
 }

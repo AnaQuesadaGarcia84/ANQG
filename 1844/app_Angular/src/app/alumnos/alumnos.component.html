@@ -5,28 +5,16 @@
             <div class="titulo">
                 <h3>Nombre alumno</h3>
             </div>
-            <div class="contenidoTabla">
-                <p>Jesús del Rocio Miguez Marín</p>
-            </div>
-            <div class="contenidoTabla">
-                <p>María del Carmen Arrocha Medina</p>
+            <div class="contenidoTabla" *ngFor="let listado of alumnosAll">
+                <p>{{listado.nombreListA}}  {{listado.apellidosListA}}</p>
             </div>
         </div>
         <div class="cursos">
             <div class="titulo">
-                <h3>Cursos que realiza</h3>
+                <h3>Matriculado</h3>
             </div>
-            <div class="contenidoTabla">
-                <ul>
-                    <li>HTML5</li>
-                    <li>Base de la programación</li>
-                </ul>
-            </div>
-            <div class="contenidoTabla">
-                <ul>
-                    <li>Dibujar con Photoshop</li>
-                    <li>Diseño imágenes 3D</li>
-                </ul>
+            <div class="contenidoTabla" *ngFor="let listado of alumnosAll">
+                <p>{{listado.estadoListA}}</p>
             </div>
         </div>
     </div>
