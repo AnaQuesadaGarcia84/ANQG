@@ -1,3 +1,4 @@
+
 <div class="datos_Alumno" *ngFor="let listado of alumno">
     <h2>Datos del alumno</h2>
     <h3>{{listado.nombreA}}  {{listado.apellidosA}}</h3>
@@ -14,7 +15,6 @@
 
 </div>
 
-
 <!-- Directrices estructurales -->
     <!-- <ul>
         <li *ngFor="let listado of alumnosAll">
@@ -29,3 +29,21 @@
         <li *ngSwitchCase="5">Has aprobado de milagro</li>
         <li *ngSwitchCase="8">Muy bien, tú si que vales</li>
     </ul> -->
+
+<!-- <input type="number" placeholder="Añadir nota" [(ngModel)]="nota">
+<p>{{nota}}</p> -->
+
+<!-- [ng-template] -->
+<!-- <div *ngIf="registrado; then siRegistrado else noRegistrado"></div>
+
+<ng-template #siRegistrado>
+    <p>Estás registrado en la aplicación</p>
+    <button (click)="unsetRegistrado()">Salir</button>
+    
+</ng-template>
+<ng-template #noRegistrado>
+    <p>No estás registrado, pulsa este botón para identificarse</p>
+    <button (click)="setRegistrado()">Identifícate</button>
+</ng-template> -->
+
+

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ConsultaComponent } from './consulta/consulta.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +26,12 @@ import { AlumnoComponent } from './alumno/alumno.component';
     RegistroComponent,
     ConsultaComponent,
     AlumnosComponent,
-    AlumnoComponent
+    AlumnoComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

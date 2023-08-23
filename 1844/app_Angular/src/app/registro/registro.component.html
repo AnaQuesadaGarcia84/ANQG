@@ -1,13 +1,25 @@
 <!-- Formulario de Registro -->
-<div class="registro">
-    <h2>Regístrate</h2>
-    <form action="">
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br>
-        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos"><br>
-        <input type="email" name="mail" id="mail" placeholder="E-mail"><br>
-        <input type="password" name="password" id="password" placeholder="Contraseña"><br>
-        <input type="password" name="password2" id="password2" placeholder="Contraseña"><br>
-        <button>Enviar</button>
-    </form>
-</div>
 
+<div *ngIf="iniciado; then siRegistrado else noRegistrado"></div>
+
+<ng-template #siRegistrado>
+    <div class="registro">
+        <h3>{{nombre}} {{apellidos}} te has registrado con éxito</h3>
+        <button (click)="noIniciado()">Salir</button>
+    </div>
+
+    
+</ng-template>
+<ng-template #noRegistrado>
+    <div class="registro">
+        <h2>Regístrate</h2>
+        <form action="">
+            <input type="text" name="nombre" id="nombreReg" placeholder="Nombre" [(ngModel)]="nombre"><br>
+            <input type="text" name="apellidos" id="apellidosReg" placeholder="Apellidos" [(ngModel)]="apellidos"><br>
+            <input type="email" name="mail" id="mailReg" placeholder="E-mail" [(ngModel)]="mail"><br>
+            <input type="password" name="password" id="passwordReg" placeholder="Contraseña" [(ngModel)]="password"><br>
+            <input type="password" name="password2" id="password2Reg" placeholder="Contraseña" [(ngModel)]="password2"><br>
+        </form>
+        <button  (click)="siIniciado()">Enviar</button>
+    </div>
+</ng-template>

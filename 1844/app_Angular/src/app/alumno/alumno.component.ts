@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { alumnoBD } from '../modelos/alumnos';
 
 @Component({
@@ -6,11 +6,20 @@ import { alumnoBD } from '../modelos/alumnos';
   templateUrl: './alumno.component.html',
   styleUrls: ['./alumno.component.css']
 })
-export class AlumnoComponent implements OnInit{
+export class AlumnoComponent {
 
   public alumno:Array<alumnoBD>
   public imagen:string
   public notaAlumno:number
+  public registrado:boolean
+  public nota:number
+
+  public nombre:String
+  public apellidos:String
+  public mail:String
+  public password:String
+  public password2:String
+  public iniciado:boolean
   
   constructor(){
     this.alumno=[
@@ -20,11 +29,26 @@ export class AlumnoComponent implements OnInit{
     ]
 
     this.notaAlumno=5
-    
+    this.registrado=false
+    this.nota=0
     this.imagen = 'https://thecatapi.com/api/images/get?format=src&type=gif?results_per_page='
+
+    this.nombre=""
+    this.apellidos=""
+    this.mail=""
+    this.password=""
+    this.password2=""
+    this.iniciado=false
     
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
+  setRegistrado(){
+    this.registrado=true
   }
+
+  unsetRegistrado(){
+    this.registrado=false
+  }
+
+  
 }

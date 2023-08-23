@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AccesoComponent {
 
+  public email:String
+  public pass:String
+
+  constructor(){
+    this.email=""
+    this.pass=""
+  }
 }
