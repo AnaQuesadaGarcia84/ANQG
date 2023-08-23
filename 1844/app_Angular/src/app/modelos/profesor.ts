@@ -21,6 +21,5 @@ export class profesorBase{
         public correoP:String,
         public telefonoP:String,
         public fotoP:String,
-        public estadoP:boolean,
     ){}
 }

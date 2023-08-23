@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { profesorBase, profesoresBase } from '../modelos/profesor';
+import { profesorBase } from '../modelos/profesor';
 
 @Component({
   selector: 'app-profesor',
@@ -7,9 +7,12 @@ import { profesorBase, profesoresBase } from '../modelos/profesor';
   styleUrls: ['./profesor.component.css']
 })
 export class ProfesorComponent {
-  // public  profesoresAll:Array<profesoresBase>
+   public  profesor:Array<profesorBase>
   
   constructor(){
-    
+    this.profesor=[
+      new profesorBase("Julián","Rodríguez",45,"julian@gmail.com","652301478", "./assets/media/hada1.png"),
+      new profesorBase("Manuel","Macías",50,"manuel@gmail.com","652301478", "./assets/media/hada2.png"),
+    ]
   }
 }

@@ -1,14 +1,14 @@
 <!-- Los datos de cada profesor -->
-<div>
+<div class="datos_Profesor" *ngFor="let listado of profesor">
     <h2>Ficha profesor</h2>
-    <h3>Miguel García Rodríguez</h3>
-    <img src="{{imagen+5}}" alt="Imagen de muestra">
-    <p>E-mail: miguelgar@gmail.com</p>
-    <p>Especialidad: HTML, CSS y JavaScript</p>
+    <h3>{{listado.nombreP}} {{listado.apellidosP}}</h3>
+    <img src="{{listado.fotoP}}" alt="Imagen de muestra">
+    <p><b>Mail:</b>{{listado.correoP}}</p>
+    <p><b>Teléfono:</b>{{listado.telefonoP}}</p>
 
     <ul>
-        <h4>Cursos</h4>
-        <li>HTML y CSS desde cero</li>
-        <li>JavaScript desde cero</li>
+        <h4>Cursos que imparte</h4>
+        <li>JavaScript</li>
+        <li>Angular</li>
     </ul>
 </div>
