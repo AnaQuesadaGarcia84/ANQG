@@ -13,6 +13,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { ConsultaComponent } from './consulta/consulta.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AlumnoComponent } from './alumno/alumno.component';
     ConsultaComponent,
     AlumnosComponent,
     AlumnoComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
