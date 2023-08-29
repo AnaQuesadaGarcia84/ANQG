@@ -5,16 +5,16 @@
             <div class="titulo">
                 <h3>Nombre alumno</h3>
             </div>
-            <div class="contenidoTabla" *ngFor="let listado of alumnosAll">
-                <p>{{listado.nombreListA}}  {{listado.apellidosListA}}</p>
+            <div class="contenidoTabla" >
+                <p *ngFor="let listado of alumnosall">{{listado.nombreA}}  {{listado.apellidosA}}</p>
             </div>
         </div>
         <div class="cursos">
             <div class="titulo">
                 <h3>Matriculado</h3>
             </div>
-            <div class="contenidoTabla" *ngFor="let listado of alumnosAll">
-                <p>{{listado.estadoListA}}</p>
+            <div class="contenidoTabla">
+                <p *ngFor="let listado of alumnosall">{{listado.estadoA}}</p>
             </div>
         </div>
     </div>

@@ -9,11 +9,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
 
-  constructor(private route: Router){
+  constructor(){
   }
 
-  irAPagina(url:String):void{
-    this.route.navigate([url]);
-  }
 
 }
