@@ -16,6 +16,8 @@ import { HeaderComponent } from './header/header.component';
 import { IlustracionesComponent } from './ilustraciones/ilustraciones.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { SubirObraComponent } from './subir-obra/subir-obra.component';
+import { GestionServiciosComponent } from './gestion-servicios/gestion-servicios.component';
+import { ListaServiciosComponent } from './lista-servicios/lista-servicios.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { SubirObraComponent } from './subir-obra/subir-obra.component';
     IlustracionesComponent,
     ContactoComponent,
     SubirObraComponent,
+    GestionServiciosComponent,
+    ListaServiciosComponent,
 
   ],
   imports: [
