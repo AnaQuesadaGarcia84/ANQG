@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app_Angular';
+
+  public popiedadesH1:any
+
+  constructor(){
+
+    //Objeto JSON para darle las porpiedades de estilo
+    this.popiedadesH1={
+      color: 'red',
+      fontSize:'2em'
+    }
+  }
 }
