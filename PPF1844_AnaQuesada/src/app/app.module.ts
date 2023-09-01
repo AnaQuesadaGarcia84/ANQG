@@ -7,7 +7,7 @@ import { APP_ROUTING } from './app.routes';
 
 // Servicios
 import {HeroesService} from './servicios/heroes.service';
-// Componentes
+// // Componentes
 import { AppComponent } from './app.component';
 import { SharedComponent } from './components/shared/shared.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';

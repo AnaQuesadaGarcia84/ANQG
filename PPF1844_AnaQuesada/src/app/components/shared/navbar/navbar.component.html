@@ -20,15 +20,15 @@
         <a class="nav-link" [routerLink]="['about']">Acerca de </a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Dropdown
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Acción</a>
-          <a class="dropdown-item" href="#">Otra Acción</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Algo más aquí</a>
-        </div>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Acción</a></li>
+          <li><a class="dropdown-item" href="#">Otra Acción</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+        </ul>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./heroe-targeta.component.css']
 })
 export class HeroeTargetaComponent implements OnInit {
+[x: string]: any;
 
   @Input() heroe: any={};
   @Input() index: number;
@@ -15,6 +16,7 @@ export class HeroeTargetaComponent implements OnInit {
 
   constructor(private router:Router) {
     this.heroeSeleccionado = new EventEmitter();
+    this.index=0
   }
 
   ngOnInit() {
