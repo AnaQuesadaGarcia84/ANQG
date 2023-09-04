@@ -14,6 +14,6 @@ export class ConsultaComponent implements OnInit{
   title="Formulario de contacto"
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 }
