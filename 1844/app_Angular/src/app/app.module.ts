@@ -16,6 +16,7 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
     AlumnoComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

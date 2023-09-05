@@ -13,9 +13,10 @@ export class AppComponent {
   constructor(){
 
     //Objeto JSON para darle las porpiedades de estilo
-    this.popiedadesH1={
-      color: 'red',
-      fontSize:'2em'
-    }
+    // this.popiedadesH1={
+    //   color: '#0D3F7D',
+    //   fontSize:'2.5em',
+    //   textAlign:'center'
+    // }
   }
 }
