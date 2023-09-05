@@ -1,0 +1,1 @@
+res.send({data: 'Esto viene de el controlador usuario'})
