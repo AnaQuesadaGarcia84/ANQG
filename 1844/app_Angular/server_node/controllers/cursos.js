@@ -35,11 +35,11 @@ const controller ={
     getCurso: function(req, res){
         var cursosId= req.params.id;
 
-        if(cursosId == null) return res.status(404).send({message: 'El usuario no existe'})
+        if(cursosId == null) return res.status(404).send({message: 'El curso no existe'})
 
         cursosActivation.findById(cursosId, (err,cursos)=>{
             if(err) return res.status(500).send({message: 'Error al devolver los datos'})
-            if(err) return res.status(400).send({message:'El usuario no existe'});
+            if(err) return res.status(400).send({message:'El curso no existe'});
             return res.status(200).send({
                 cursos
             });
@@ -49,7 +49,7 @@ const controller ={
     getCursos: function(req, res){
         cursos.find({}).sort('-year').exec((err,cursoss)=>{
             if(err) return res.status(500).send({message: 'Error al devolver los datos'});
-            if(!projects) return res.status(404).send({message: 'No hay usuarios que mostrar'});
+            if(!projects) return res.status(404).send({message: 'No hay cursos que mostrar'});
             return res.status(200).send({projects});
         });
     },
@@ -59,7 +59,7 @@ const controller ={
         var update = req.body;
         cursos.findByIdAndUpdate(cursosdId, update, {new:true}, (err, cursosUpdated)=>{
             if(err) return res.status(500).send({message: 'Error al actualizar'})
-            if(!cursosUpdated) return res.status(404).send({message: 'No existe el usuario a actualizar'})
+            if(!cursosUpdated) return res.status(404).send({message: 'No existe el curso a actualizar'})
             return res.status(200).send({
                 cursos:cursosUpdated
             })
@@ -70,8 +70,8 @@ const controller ={
         var cursosId = req.params.id;
 
         cursos.findByIdAndRemove(cursosId, (err, cursosRemoved)=>{
-            if(err) return res.status(500).send({message: 'No se ha podido borrar el usuario'});
-            if(!cursosRemoved) return res.status(404).send({message:'No se puede eliminar el usuario'});
+            if(err) return res.status(500).send({message: 'No se ha podido borrar el curso'});
+            if(!cursosRemoved) return res.status(404).send({message:'No se puede eliminar el curso'});
 
             return res.status(200).send({
                 cursos:cursosRemoved
