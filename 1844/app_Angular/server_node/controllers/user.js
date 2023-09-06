@@ -23,6 +23,7 @@ const controller ={
         user.category = params.category;
         user.year= params.year;
         user.langs = params.langs;
+        user.image=null;
         user.save((err, userStored)=>{
             if(err) return res.status(500).send({message: 'Error al guardar el documento'})
             if(!projectStored) return res.status(404).send({message: 'No se ha podido hacer la conexión'})
