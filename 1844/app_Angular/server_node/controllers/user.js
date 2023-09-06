@@ -55,10 +55,10 @@ const controller ={
 
     updateUser : function(req, res){
         var userdId = req.params.id;
-        var ipdate = req.body;
+        var update = req.body;
         User.findByIdAndUpdate(userdId, update, {new:true}, (err, userUpdated)=>{
             if(err) return res.status(500).send({message: 'Error al actualizar'})
-            if(!userUpdated) returnres.status(404).send({message: 'No existe el usuario a actualizar'})
+            if(!userUpdated) return res.status(404).send({message: 'No existe el usuario a actualizar'})
             return res.status(200).send({
                 user:userUpdated
             })

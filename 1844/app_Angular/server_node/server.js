@@ -1,6 +1,6 @@
 const express=require('express')
 
-//const userRouters= require('./app/routes/user')
+const userRouters= require('./routes/user')
 
 const app = express()
 
@@ -10,7 +10,7 @@ app.listen(port,()=>{
     console.log('La aplicación está en línea...')
 })
 
-//app.use(userRouters)
+app.use(userRouters)
 
 //Conexión con la base de datos
 const mongoose=require('mongoose')
