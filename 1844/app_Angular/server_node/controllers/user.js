@@ -1,22 +1,22 @@
-const model= require('../models/user');
-const fs=require('fs');
+const User= require('../models/user');
+//const fs=require('fs');
 const { Model } = require('mongoose');
 const path=require('path');
 const { use } = require('../routes/user');
 
 const controller ={
-    home: function(req, res){
+    homeUser: function(req, res){
         return res.status(200).send({
             message: 'Soy el home'
         });
     },
-    test: function(req,res){
+    testUser: function(req,res){
         return res.status(200).send({
             message: 'Soy el método o acción test del controlador user'
         });
     },
     saveUser: function(req, res){
-        const user= new Model();
+        const user= new User();
         const params = req.body;
         user.name= params.name;
         user.description = params.description;

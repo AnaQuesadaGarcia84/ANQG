@@ -1,5 +1,5 @@
-const model=require('../models/cursos');
-const fs=require('fs');
+const Cursos=require('../models/cursos');
+//const fs=require('fs');
 const { Model } = require('mongoose');
 const path=require('path');
 const { use } = require('../routes/cursos');
@@ -10,7 +10,7 @@ const controller ={
             message: 'Soy el home de cursos'
         });
     },
-    test: function(req,res){
+    testCursos: function(req,res){
         return res.status(200).send({
             message: 'Soy el método o acción test del controlador cursos'
         });
@@ -46,7 +46,7 @@ const controller ={
     },
 
     getCursos: function(req, res){
-        cursos.find({}).sort('-year').exec((err,cursoss)=>{
+        Cursos.find({}).sort('-year').exec((err,cursoss)=>{
             if(err) return res.status(500).send({message: 'Error al devolver los datos'});
             if(!projects) return res.status(404).send({message: 'No hay cursos que mostrar'});
             return res.status(200).send({projects});
@@ -56,7 +56,7 @@ const controller ={
     updateCursos : function(req, res){
         var cursosdId = req.params.id;
         var update = req.body;
-        cursos.findByIdAndUpdate(cursosdId, update, {new:true}, (err, cursosUpdated)=>{
+        Cursos.findByIdAndUpdate(cursosdId, update, {new:true}, (err, cursosUpdated)=>{
             if(err) return res.status(500).send({message: 'Error al actualizar'})
             if(!cursosUpdated) return res.status(404).send({message: 'No existe el curso a actualizar'})
             return res.status(200).send({
@@ -68,7 +68,7 @@ const controller ={
     deleteCursos: function(req, res){
         var cursosId = req.params.id;
 
-        cursos.findByIdAndRemove(cursosId, (err, cursosRemoved)=>{
+        Cursos.findByIdAndRemove(cursosId, (err, cursosRemoved)=>{
             if(err) return res.status(500).send({message: 'No se ha podido borrar el curso'});
             if(!cursosRemoved) return res.status(404).send({message:'No se puede eliminar el curso'});
 
