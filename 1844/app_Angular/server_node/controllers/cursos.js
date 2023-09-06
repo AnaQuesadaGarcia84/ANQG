@@ -5,9 +5,9 @@ const path=require('path');
 const { use } = require('../routes/cursos');
 
 const controller ={
-    home: function(req, res){
+    homeCursos: function(req, res){
         return res.status(200).send({
-            message: 'Soy el home'
+            message: 'Soy el home de cursos'
         });
     },
     test: function(req,res){
@@ -21,9 +21,8 @@ const controller ={
         
         cursos.name= params.name;
         cursos.description = params.description;
-        cursos.category = params.category;
-        cursos.year= params.year;
-        cursos.langs = params.langs;
+        cursos.hours = params.category;
+        cursos.asignaturas = params.langs;
         cursos.save((err, cursosStored)=>{
             if(err) return res.status(500).send({message: 'Error al guardar el documento'})
             if(!projectStored) return res.status(404).send({message: 'No se ha podido hacer la conexión'})
