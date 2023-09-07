@@ -11,6 +11,7 @@ import { ProfesorComponent } from './profesor/profesor.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { RegistroComponent } from './registro/registro.component';
 import { HomeComponent } from './home/home.component';
+import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:  'profesor', component:ProfesorComponent},
   {path:  'profesores', component:ProfesoresComponent},
   {path:  'registro', component:RegistroComponent},
+  {path: 'crearCurso', component:CrearCursoComponent},
 ];
 
 @NgModule({

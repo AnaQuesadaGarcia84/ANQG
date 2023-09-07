@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>{{title}}</h2>
+
+    <form #cursoForm="ngForm" (ngSubmit)="onSubmit(cursoForm)">
+        <p>
+            <input type="text" name="name" id="name" #name="ngModel" [(ndModel)]="curso.name" required placeholder="Nombre del curso">
+            <span class="form_error" *ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
+        </p>
+        <p>
+            <textarea type="text" name="description" id="description" #description="ngModel" [(ndModel)]="curso.description" required placeholder="Descripción del curso"></textarea>
+            <span class="form_error" *ngIf="description.touched && !description.valid">La descripción del curso es obligatorio</span>
+        </p>
+        <p>
+            <input type="text" name="category" id="category" #category="ngModel" [(ndModel)]="category.name" required placeholder="Introduce la cetagoría del curso">
+            <span class="form_error" *ngIf="category.touched && !category.valid">La categoría es obligatorio</span>
+        </p>
+        <p>
+            <input type="number" name="duracion" id="duracion" #duracion="ngModel" [(ndModel)]="duracion.name" required placeholder="Introduce la duración del curso">
+        </p>
+        <p>
+            <input type="text" name="temas" id="temas" #temas="ngModel" [(ndModel)]="temas.name" required placeholder="Introduce los temas del curso">
+            <span class="form_error" *ngIf="temas.touched && !temas.valid">Los temas son obligatorios</span>
+        </p>
+        <input type="submit" value="Enviar" [disable]="!cursoForm.form.valid">
+    </form>
+</div>
