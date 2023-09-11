@@ -1,56 +1,53 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Curso} from '../Models/curso';
+import { Global } from './global';
 
-import { Curso } from '../modelos/cursos';
-import {Global} from '../servicios/global';
+@Injectable()
+export class save_cursoService{
+	public url:string;
 
-@Injectable({
-  providedIn: 'root'
-})
-export class save_cursoService {
+	constructor(
+		private _http: HttpClient
+	){
+		this.url = Global.url;
+	}
 
-  public url:string;
+	testService(){
+		return 'Probando el servicio de Angular';
+	}
 
+	saveCurso(curso: Curso): Observable<any>{
+		let params = JSON.stringify(curso);
+		let headers = new HttpHeaders().set('Content-Type','application/json');
 
-  constructor(private _http:HttpClient) {
-    this.url = Global.url;
-  }
+		return this._http.post(this.url+'save-curso', params, {headers: headers});
+	}
 
-  testService(){
-    return 'Probando el servicio de Angular';
-  }
+	getCursos(): Observable<any>{
+		let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-  saveCurso(curso:Curso): Observable<any>{
-    let params = JSON.stringify(curso);
-    let headers= new HttpHeaders().set('Content-Type', 'application/json');
+		return this._http.get(this.url+'cursos', {headers: headers});
+	}
 
-    return this._http.post(this.url+'save-curso', params,{headers:headers});
-  }
+	getCurso(id: string): Observable<any>{
+		let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-  getCursos():Observable<any>{
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+		return this._http.get(this.url+'curso/'+id, {headers: headers});
+	}
 
-    return this._http.get(this.url+'cursos', {headers:headers});
-  }
+	deleteCurso(id: string): Observable<any>{
+		let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-  getCurso(id:string):Observable<any>{
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
+		return this._http.delete(this.url+'curso/'+id, {headers: headers});
+	}
 
-    return this._http.get(this.url+'curso/'+id, {headers:headers});
-  }
+	updateCurso(curso: any): Observable<any>{
+		let params = JSON.stringify(curso);
+		let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-  deleteCurso(id:string):Observable<any>{
-    let headers = new HttpHeaders().set('Content-Type', 'aplication/json');
-
-    return this._http.delete(this.url+'curso/'+id, {headers:headers});
-  }
-
-  updateCurso(curso:any): Observable<any>{
-    let params = JSON.stringify(curso);
-    let headers= new HttpHeaders().set('Content-Type', 'application/json');
-
-    return this._http.put(this.url+'curso'+curso._id, params,{headers:headers});
-  }
+		return this._http.put(this.url+'curso/'+Curso._id, params, {headers: headers});
+	}
 
 }

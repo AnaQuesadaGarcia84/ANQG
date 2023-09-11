@@ -6,33 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit{
-
-  public nombre:String
-  public apellidos:String
-  public mail:String
-  public password:String
-  public password2:String
-  public iniciado:boolean
-
+  public nombreA: string
+  public emailA: string 
+  public contrasenaA: string
 
   constructor(){
-    this.nombre=""
-    this.apellidos=""
-    this.mail=""
-    this.password=""
-    this.password2=""
-    this.iniciado=false
+    this.nombreA = ''
+    this.emailA = ''
+    this.contrasenaA = ''
+
   }
 
-  siIniciado(){
-    this.iniciado=true
+  submitFormA() {
+    console.log('Formulario enviado:');
+    console.log('Nombre:', this.nombreA);
+    console.log('Email:', this.emailA);
+    console.log('Contraseña:', this.contrasenaA);
   }
 
-  noIniciado(){
-    this.iniciado=false
+  ngOnInit(): void {
+    
   }
 
-  ngOnInit(){
-    console.log("Está vivo!!!!")
-  }
 }

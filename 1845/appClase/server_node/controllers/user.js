@@ -1,84 +1,101 @@
-const User= require('../models/user');
-//const fs=require('fs');
-const { Model } = require('mongoose');
-const path=require('path');
-const { use } = require('../routes/user');
+const Model = require('../models/user')
+const fs = require('fs');
+const path = require('path');
 
-const controller ={
-    homeUser: function(req, res){
-        return res.status(200).send({
-            message: 'Soy el home'
-        });
-    },
-    testUser: function(req,res){
-        return res.status(200).send({
-            message: 'Soy el método o acción test del controlador user'
-        });
-    },
-    saveUser: function(req, res){
-        const user= new User();
-        const params = req.body;
-        user.name= params.name;
-        user.description = params.description;
-        user.category = params.category;
-        user.year= params.year;
-        user.langs = params.langs;
-        user.image=null;
-        user.save((err, userStored)=>{
-            if(err) return res.status(500).send({message: 'Error al guardar el documento'})
-            if(!projectStored) return res.status(404).send({message: 'No se ha podido hacer la conexión'})
+const controller = {
+	
+	home: function(req, res){
+		return res.status(200).send({
+			message: 'Soy la home'
+		});
+	},
 
-            return res.status(200).send({user:userStored});
-        })   
-    },
+	test: function(req, res){
+		return res.status(200).send({
+			message: "Soy el metodo o accion test del controlador de user"
+		});
+	},
 
-    getUser: function(req, res){
-        var userId= req.params.id;
+	saveUser: function(req, res){
+		const user = new Model();
 
-        if(userId == null) return res.status(404).send({message: 'El usuario no existe'})
+		const params = req.body;
+		user.nombre = params.nombre;
+		user.descripcion = params.descripcion;
+		user.categor = params.edad;
+		user.mail = params.mail;
+		user.image = null;
 
-        UserActivation.findById(userId, (err,user)=>{
-            if(err) return res.status(500).send({message: 'Error al devolver los datos'})
-            if(err) return res.status(400).send({message:'El usuario no existe'});
-            return res.status(200).send({
-                user
-            });
-        });
-    },
+		user.save((err, userStored) => {
+			if(err) return res.status(500).send({message: 'Error al guardar el documento.'});
 
-    getUsers: function(req, res){
-        User.find({}).sort('-year').exec((err,users)=>{
-            if(err) return res.status(500).send({message: 'Error al devolver los datos'});
-            if(!projects) return res.status(404).send({message: 'No hay usuarios que mostrar'});
-            return res.status(200).send({projects});
-        });
-    },
+			if(!projectStored) return res.status(404).send({message: 'No se ha podido guardar el usuario.'});
 
-    updateUser : function(req, res){
-        var userdId = req.params.id;
-        var update = req.body;
-        User.findByIdAndUpdate(userdId, update, {new:true}, (err, userUpdated)=>{
-            if(err) return res.status(500).send({message: 'Error al actualizar'})
-            if(!userUpdated) return res.status(404).send({message: 'No existe el usuario a actualizar'})
-            return res.status(200).send({
-                user:userUpdated
-            })
-        })
-    },
+			return res.status(200).send({user: userStored});
+		});
+	},
 
-    deleteUser: function(req, res){
-        var userId = req.params.id;
+	getUser: function(req, res){
+		var userId = req.params.id;
 
-        User.findByIdAndRemove(userId, (err, userRemoved)=>{
-            if(err) return res.status(500).send({message: 'No se ha podido borrar el usuario'});
-            if(!userRemoved) return res.status(404).send({message:'No se puede eliminar el usuario'});
+		if(userId == null) return res.status(404).send({message: 'El usuario no existe.'});
 
-            return res.status(200).send({
-                user:userRemoved
-            });
-        });
-    }
+		User.findById(userId, (err, user) => {
+
+			if(err) return res.status(500).send({message: 'Error al devolver los datos.'});
+
+			if(!user) return res.status(404).send({message: 'El usuario no existe.'});
+
+			return res.status(200).send({
+				user
+			});
+
+		});
+	},
+
+	getUsers: function(req, res){
+
+		User.find({}).sort('-edad').exec((err, users) => {
+
+			if(err) return res.status(500).send({message: 'Error al devolver los datos.'});
+
+			if(!projects) return res.status(404).send({message: 'No hay usuarios que mostrar.'});
+
+			return res.status(200).send({projects});
+		});
+
+	},
+
+	updateUser: function(req, res){
+		var userId = req.params.id;
+		var update = req.body;
+
+		User.findByIdAndUpdate(userId, update, {new:true}, (err, userUpdated) => {
+			if(err) return res.status(500).send({message: 'Error al actualizar'});
+
+			if(!userUpdated) return res.status(404).send({message: 'No existe el usuario para actualizar'});
+
+			return res.status(200).send({
+				user: userUpdated
+			});
+		});
+
+	},
+
+	deleteUser: function(req, res){
+		var userId = req.params.id;
+
+		User.findByIdAndRemove(userId, (err, userRemoved) => {
+			if(err) return res.status(500).send({message: 'No se ha podido borrar el usuario'});
+
+			if(!userRemoved) return res.status(404).send({message: "No se puede eliminar ese usuario."});
+
+			return res.status(200).send({
+				user: userRemoved
+			});
+		});
+	},
 
 };
 
-module.exports= controller;
+module.exports = controller;

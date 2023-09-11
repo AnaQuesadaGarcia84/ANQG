@@ -1,22 +1,7 @@
-.listado_Alumnos{
-    text-align: center;
+
+
+.marcado{
     font-size: 1.2em;
-}
-
-.listado{
-    display: flex;
-}
-
-.alumno, .cursos{
-    width: 50%; 
-}
-
-.titulo{
-    background-color: #00214A;
-    padding: 0.5em;
-    color: white;
-}
-
-.contenidoTabla ul{
-    list-style: none;
+    color: green;
+    font-weight: 800;
 }

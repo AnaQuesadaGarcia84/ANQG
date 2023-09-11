@@ -1,27 +1,41 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { GcursoService } from '../servicios/gcurso.service';
+import { GCurso } from '../Models/gcurso';
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  styleUrls: ['./cursos.component.css'],
 })
 export class CursosComponent implements OnInit{
 
-  public nombre:string
-  public listado:string
+  listCursos: GCurso[] = []
+  // toastr: any;
 
-  constructor(){
-    this.nombre="Programación"
-    this.listado="Listado de Cursos"
+constructor(private _gcursoService: GcursoService,
+            private toastr: ToastrService ){
+  
+}
+  ngOnInit(): void{
+this.obtenerCursos()
+  }
+  obtenerCursos() {
+    this._gcursoService.getCursos().subscribe(data => {
+      console.log(data);
+      this.listCursos = data;
+    }, error => {
+      console.log(error);
+    })
+  }
+  eliminarCurso(id: any) {
+    this._gcursoService.eliminarCurso(id).subscribe(data => {
+      this.toastr.error('El curso fue eliminado con exito' ,'Curso Eliminado');
+      this.obtenerCursos();
+    }, error => {
+      console.log(error);
+    })
   }
 
-  //Método para que cargue al iniciar
-  ngOnInit(){
-    console.log("OnInit")
-  }
 
-  //Función
-  cambiarTitulo(){
-    this.nombre="Programación en Angular"
-  }
 }
