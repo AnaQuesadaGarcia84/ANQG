@@ -1,0 +1,26 @@
+<!-- Formulario de Registro -->
+
+<div *ngIf="iniciado; then siRegistrado else noRegistrado"></div>
+
+<ng-template #siRegistrado>
+    <div class="registro">
+        <h3>{{nombre}} {{apellidos}} te has registrado con éxito</h3>
+        <button (click)="noIniciado()">Salir</button>
+    </div>
+
+    
+</ng-template>
+<ng-template #noRegistrado>
+    <div class="registro">
+        <h2>Regístrate</h2>
+        <form action="">
+            <input type="text" name="nombre" id="nombreReg" placeholder="Nombre" [(ngModel)]="nombre"><br>
+            <input type="text" name="apellidos" id="apellidosReg" placeholder="Apellidos" [(ngModel)]="apellidos"><br>
+            <input type="email" name="mail" id="mailReg" placeholder="E-mail" [(ngModel)]="mail"><br>
+            <input type="password" name="password" id="passwordReg" placeholder="Contraseña" [(ngModel)]="password"><br>
+            <input type="tel" name="tel" id="tel" placeholder="Teléfono">
+            <input type="text" placeholder="Introduce ruta de la imagen">
+        </form>
+        <button  (click)="siIniciado()">Enviar</button>
+    </div>
+</ng-template>

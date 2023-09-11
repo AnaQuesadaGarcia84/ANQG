@@ -1,0 +1,41 @@
+.consultas{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.consultas input, textarea{
+    padding: 0.5em;
+    width: 20%;
+    margin-top: 0.5em;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+}
+
+.mensaje{
+    color: #c02f2f;
+    font-weight: bolder;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.consultas button{
+    width: 20%;
+    padding: 0.5em;
+    font-weight: bolder;
+    background-color: #0D3F7D;
+    color: white;
+    border-radius: 0.3em;
+    margin-left: 0.3em;
+    font-size: 0.8em;
+}
+
+.consultas button:hover{
+    background-color: #a4fdf7;
+    box-shadow: 5px 5px 5px #00214A;
+    color: #0D3F7D;
+    font-weight: bolder;
+}
+
+.mensajeEnviado{
+    color: rgb(5, 76, 43);
+}

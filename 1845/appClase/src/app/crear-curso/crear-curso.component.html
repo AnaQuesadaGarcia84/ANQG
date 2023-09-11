@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>{{title}}</h2>
+
+    <div class="message succes" *ngIf="status =='succes'">
+        <h3>El curso se ha creado correctamente, puedes <a [routerLink]="['/curso', save_curso._id]"> verlo aquí</a></h3>
+    </div>
+
+    <div class="message succes" *ngIf="status =='failed'">
+        <h3>El curso <span class="noCreado">NO SE HA CREADO</span></h3>
+    </div>
+
+    <form #cursoForm="ngForm" (ngSubmit)="onSubmit(cursoForm)">
+        <p>
+            <input type="text" name="name" id="name" #name="ngModel" [(ngModel)]="curso.name" required placeholder="Nombre del curso"><br>
+            <span class="form_error" *ngIf="name.touched && !name.valid">El nombre es obligatorio</span>
+        </p>
+        <p>
+            <textarea type="text" name="description" id="description" #description="ngModel" [(ngModel)]="curso.description" required placeholder="Descripción del curso" cols="30" rows="5"></textarea><br>
+            <span class="form_error" *ngIf="description.touched && !description.valid">La descripción del curso es obligatorio</span>
+        </p>
+        <p>
+            <input type="text" name="category" id="category" #category="ngModel" [(ngModel)]="curso.category" required placeholder="Introduce la cetagoría del curso"><br>
+            <span class="form_error" *ngIf="category.touched && !category.valid">La categoría es obligatorio</span>
+        </p>
+        <p>
+            <input type="number" name="duracion" id="duracion" #duracion="ngModel" [(ngModel)]="curso.duracion" required placeholder="Introduce la duración del curso"><br>
+        </p>
+        <p>
+            <input type="text" name="temas" id="temas" #temas="ngModel" [(ngModel)]="curso.temas" required placeholder="Introduce los temas del curso"><br>
+            <span class="form_error" *ngIf="temas.touched && !temas.valid">Los temas son obligatorios</span>
+        </p>
+        <input class="button" type="submit" value="Enviar" [disabled]="!cursoForm.form.valid">
+    </form>
+</div>

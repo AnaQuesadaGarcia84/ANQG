@@ -1,0 +1,14 @@
+<!-- Los datos de cada profesor -->
+<div class="datos_Profesor" *ngFor="let listado of profesor">
+    <h2>Ficha profesor</h2>
+    <h3>{{listado.nombreP}} {{listado.apellidosP}}</h3>
+    <img src="{{listado.fotoP}}" alt="Imagen de muestra">
+    <p><b>Mail:</b>{{listado.correoP}}</p>
+    <p><b>Teléfono:</b>{{listado.telefonoP}}</p>
+
+    <ul>
+        <h4>Cursos que imparte</h4>
+        <li>JavaScript</li>
+        <li>Angular</li>
+    </ul>
+</div>

@@ -1,0 +1,49 @@
+<div class="datos_Alumno" *ngFor="let listado of alumno">
+    <h2>Datos del alumno</h2>
+    <h3>{{listado.nombreA}}  {{listado.apellidosA}}</h3>
+    <img src="{{listado.fotoA}}" alt="Imagen de muestra">
+    <p><b>Mail:</b> {{listado.correoA}}</p>
+    <p><b>Teléfono:</b> {{listado.telefonoA}}</p>
+    <p *ngIf="listado.estadoA != false"><b>Matriculado</b></p>
+    <ul>
+        Matriculado en:
+        <li>Curso HTML5</li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>
+
+
+<!-- Directrices estructurales -->
+    <!-- <ul>
+        <li *ngFor="let listado of alumnosAll">
+              <b>Edad:</b> {{listado.edadA}} <b>Mail:</b> {{listado.correoA}}
+            <span *ngIf="listado.estadoA != false"><b>Matriculado</b></span>
+        </li>
+    </ul>
+
+    <p>La nota media es:</p>
+    <ul [ngSwitch]="notaAlumno">
+        <li *ngSwitchCase="4">No has aprobado tienes que estudiar más</li>
+        <li *ngSwitchCase="5">Has aprobado de milagro</li>
+        <li *ngSwitchCase="8">Muy bien, tú si que vales</li>
+    </ul> -->
+
+<!-- <input type="number" placeholder="Añadir nota" [(ngModel)]="nota">
+<p>{{nota}}</p> -->
+
+<!-- [ng-template] -->
+<!-- <div *ngIf="registrado; then siRegistrado else noRegistrado"></div>
+
+<ng-template #siRegistrado>
+    <p>Estás registrado en la aplicación</p>
+    <button (click)="unsetRegistrado()">Salir</button>
+    
+</ng-template>
+<ng-template #noRegistrado>
+    <p>No estás registrado, pulsa este botón para identificarse</p>
+    <button (click)="setRegistrado()">Identifícate</button>
+</ng-template> -->
+
+
