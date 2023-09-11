@@ -1,8 +1,8 @@
-const Cursos=require('../models/cursos');
+const Cursos=require('../models/avaluable');
 //const fs=require('fs');
 const { Model } = require('mongoose');
 const path=require('path');
-const { use } = require('../routes/cursos');
+const { use } = require('../routes/evaluable');
 
 const controller ={
     homeCursos: function(req, res){

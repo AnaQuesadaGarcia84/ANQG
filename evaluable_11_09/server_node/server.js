@@ -1,7 +1,6 @@
 const express=require('express')
 
-const userRouters= require('./routes/user')
-const cursoRouters= require('./routes/cursos')
+const cursoRouters= require('./routes/evaluable')
 
 const app = express()
 
@@ -11,14 +10,12 @@ app.listen(port,()=>{
     console.log('La aplicación está en línea...')
 })
 
-app.use(userRouters, cursoRouters)
-
 
 //Conexión con la base de datos
 const mongoose=require('mongoose')
 
 mongoose.Promise= global.Promise
-mongoose.connect('mongodb://127.0.0.1:27017/AppWeb', {
+mongoose.connect('mongodb://127.0.0.1:27017/Evaluable11_9', {
     useNewUrlParser:true,
 })
 .then(()=>{
@@ -27,8 +24,3 @@ mongoose.connect('mongodb://127.0.0.1:27017/AppWeb', {
 .catch(err => console.log(err))
 
 
-
-
-
-
-//initDB()
