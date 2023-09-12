@@ -12,9 +12,7 @@ export class HomeComponent {
 
     //Objeto JSON para darle las porpiedades de estilo
     this.popiedadesH1={
-      color: '#0D3F7D',
-      fontSize:'2.5em',
-      textAlign:'center'
+      
     }
   }
 

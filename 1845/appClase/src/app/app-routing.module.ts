@@ -14,9 +14,11 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { TareasComponent } from './tareas/tareas.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  {path: '', component:HomeComponent},
   {path: 'alumno', component: AlumnoComponent},
   {path: 'alumnos', component: AlumnosComponent },
   {path: 'cursos', component: CursosComponent},
@@ -31,7 +33,7 @@ const routes: Routes = [
   {path: 'listado', component: ListarCursoComponent},
   {path: 'tareas', component: TareasComponent},
 
-  {path: '**', redirectTo: '',pathMatch:'full'}
+  //{path: '**', redirectTo: '',pathMatch:'full'}
 ];
 
 @NgModule({
