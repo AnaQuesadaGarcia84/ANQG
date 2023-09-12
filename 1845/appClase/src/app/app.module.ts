@@ -26,6 +26,9 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TareasComponent } from './tareas/tareas.component';
 
+//CDK
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +46,7 @@ import { TareasComponent } from './tareas/tareas.component';
     ListarCursoComponent,
     HeaderComponent,
     DashboardComponent,
-    TareasComponent
+    //TareasComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,9 @@ import { TareasComponent } from './tareas/tareas.component';
     ToastrModule.forRoot(),
     AuthModule.forRoot({
       domain: 'estadistica.auth0.com',
-      clientId: 'knBYg5PAoX8zjj7uG9ShFEMQuqtAUGAQ'})
+      clientId: 'knBYg5PAoX8zjj7uG9ShFEMQuqtAUGAQ'}),
+    DragDropModule,
+    TareasComponent
   ],
   providers: [],
   bootstrap: [AppComponent],
