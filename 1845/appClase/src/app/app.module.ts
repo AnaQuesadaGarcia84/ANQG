@@ -24,6 +24,7 @@ import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { TareasComponent } from './tareas/tareas.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CrearCursoComponent,
     ListarCursoComponent,
     HeaderComponent,
-    DashboardComponent
+    DashboardComponent,
+    TareasComponent
   ],
   imports: [
     BrowserModule,
