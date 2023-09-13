@@ -1,0 +1,28 @@
+div{
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+form{
+    margin-top: 0.8em;
+}
+
+.example-full-width{
+    width: 30%;
+}
+
+button{
+    width: 15%;
+    padding: 0.5em;
+    background-color: #0D3F7D;
+    color: #e0e0e0;
+    border-radius: 0.3em;
+    margin-left: 0.3em;
+    font-size: 1em;
+}
+
+button:hover{
+    background-color: #a1c9f7;
+    box-shadow: 5px 5px 5px #00214A;
+    color: #0D3F7D;
+}
