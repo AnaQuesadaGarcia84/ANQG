@@ -1,4 +1,44 @@
-.fa-solid {
-    cursor: pointer;
+.cursos{
+    display: flex;
+}
 
+.example-card {
+    max-width: 400px;
+    margin-top: 0.8em;
+    margin-left: 0.5em;
+  }
+  .card-header{
+    background-color: #c3ebf8;
+    border-radius: 0.3em 0.3em 0 0;
+  }
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .card-content{
+    background-color: #c3ebf8;
+    border-radius: 0.3em;
+  }
+
+  .example-card:hover{
+    box-shadow: rgb(50, 49, 49) 5px 5px 5px;
+  }
+
+button{
+    padding: 0.5em;
+    background-color: #0D3F7D;
+    border-radius: 0.3em;
+    margin-left: 0.3em;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+button:hover{
+    box-shadow: #1d1d1d 3px 3px 3px;
+}
+
+
+.card{
+    margin-top: 0.8em;
 }

@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Importar componentes
 import { CursosComponent } from './cursos/cursos.component';
-import { CursoComponent } from './curso/curso.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
@@ -22,7 +21,6 @@ const routes: Routes = [
   {path: 'alumno', component: AlumnoComponent},
   {path: 'alumnos', component: AlumnosComponent },
   {path: 'cursos', component: CursosComponent},
-  {path: 'curso', component: CursoComponent},
   {path: 'profesor', component: ProfesorComponent},
   {path: 'profesores', component: ProfesoresComponent},
   {path: 'acceso', component: AccesoComponent},

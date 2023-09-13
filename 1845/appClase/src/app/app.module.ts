@@ -11,7 +11,6 @@ import { AuthModule } from '@auth0/auth0-angular';
 // Components
 import { AppComponent } from './app.component';
 import { CursosComponent } from './cursos/cursos.component';
-import { CursoComponent } from './curso/curso.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
@@ -19,20 +18,22 @@ import { ProfesoresComponent } from './profesores/profesores.component';
 import { AccesoComponent } from './acceso/acceso.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { CrearcursoComponent } from './crearcurso/crearcurso.component';
 import { CrearCursoComponent } from './crear-curso/crear-curso.component';
 import { ListarCursoComponent } from './listar-curso/listar-curso.component';
 import { HeaderComponent } from './header/header.component';
 import { TareasComponent } from './tareas/tareas.component';
+import { FooterComponent } from './footer/footer.component';
 
 //CDK
 import {DragDropModule} from '@angular/cdk/drag-drop';
+
+//MATERIAL
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     CursosComponent,
-    CursoComponent,
     AlumnosComponent,
     AlumnoComponent,
     ProfesorComponent,
@@ -40,10 +41,10 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     AccesoComponent,
     RegistroComponent,
     ContactoComponent,
-    CrearcursoComponent,
     CrearCursoComponent,
     ListarCursoComponent,
     HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +58,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
       domain: 'estadistica.auth0.com',
       clientId: 'knBYg5PAoX8zjj7uG9ShFEMQuqtAUGAQ'}),
     DragDropModule,
-    TareasComponent
+    TareasComponent,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

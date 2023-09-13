@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
 
+div{
+    text-align: center;
+}
+
 h1{
     font-family: 'Sofia', cursive;
     color: '#0D3F7D';
     font-size:'2.5em';
+    margin-top: 0.5em;
+    margin-bottom: 1em;
 }
 
 img{
-    width: 100%;
+    width: 80%;
 }
 

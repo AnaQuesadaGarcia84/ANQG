@@ -1,7 +1,7 @@
-<h2>Tareas</h2>
+<h2 class="text-center text-primary mt-3">Tareas</h2>
 
 <div class="example-container">
-    <h2>Por hacer</h2>
+    <h3 class="text-center">Por hacer</h3>
   
     <div
       cdkDropList
@@ -10,12 +10,12 @@
       [cdkDropListConnectedTo]="[doneList, finishList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      <div class="example-box porHacer" *ngFor="let item of todo" cdkDrag>{{item}}</div>
     </div>
   </div>
   
   <div class="example-container">
-    <h2>Haciendo</h2>
+    <h3 class="text-center">Haciendo</h3>
   
     <div
       cdkDropList
@@ -24,12 +24,12 @@
       [cdkDropListConnectedTo]="[todoList, finishList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      <div class="example-box haciendo" *ngFor="let item of done" cdkDrag>{{item}}</div>
     </div>
   </div>
 
   <div class="example-container">
-    <h2>Terminadas</h2>
+    <h3 class="text-center">Terminadas</h3>
   
     <div
       cdkDropList
@@ -38,44 +38,7 @@
       [cdkDropListConnectedTo]="[todoList, doneList]"
       class="example-list"
       (cdkDropListDropped)="drop($event)">
-      <div class="example-box" *ngFor="let item of finish" cdkDrag>{{item}}</div>
+      <div class="example-box terminadas" *ngFor="let item of finish" cdkDrag>{{item}}</div>
     </div>
   </div>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Curso HTML, CSS y JavaScripit</mat-card-title>
-    <mat-card-subtitle>Javier Díaz Machado</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://img-c.udemycdn.com/course/750x422/3906220_be65_2.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
-
-
-<mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Javier Armando Errores</mat-card-title>
-        <mat-card-subtitle>Alumno</mat-card-subtitle>
-        <img mat-card-md-image src="https://previews.123rf.com/images/hermandesign2015/hermandesign20151702/hermandesign2015170200085/71907228-de-dibujos-animados-lindo-del-ni%C3%B1o.jpg"  alt="Image of a Shiba Inu">
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content>
-      {{longText}}
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </mat-card-actions>
-  </mat-card>
