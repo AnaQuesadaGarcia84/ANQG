@@ -1,0 +1,13 @@
+div{
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+p{
+    margin-top: 0.5em;
+}
+
+p a{
+    color: #0D3F7D;
+    font-weight: bold;
+}
