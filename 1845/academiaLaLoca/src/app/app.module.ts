@@ -14,6 +14,9 @@ import { ContactoComponent } from './contacto/contacto.component';
 import {MatInputModule} from '@angular/material/input';
 import { RegistroComponent } from './registro/registro.component';
 import { IniciarComponent } from './iniciar/iniciar.component';
+import { CursosComponent } from './cursos/cursos.component';
+import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
+import { MostrarCursosComponent } from './mostrar-cursos/mostrar-cursos.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { IniciarComponent } from './iniciar/iniciar.component';
     ContactoComponent,
     RegistroComponent,
     IniciarComponent,
+    CursosComponent,
+    ListaCursosComponent,
+    MostrarCursosComponent,
   ],
   imports: [
     BrowserModule,
