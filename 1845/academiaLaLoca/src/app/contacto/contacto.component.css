@@ -25,4 +25,5 @@ button:hover{
     background-color: #a1c9f7;
     box-shadow: 5px 5px 5px #00214A;
     color: #0D3F7D;
+    font-weight: bold;
 }

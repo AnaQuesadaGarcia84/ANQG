@@ -13,6 +13,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 //Angular
 import {MatInputModule} from '@angular/material/input';
 import { RegistroComponent } from './registro/registro.component';
+import { IniciarComponent } from './iniciar/iniciar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RegistroComponent } from './registro/registro.component';
     FooterComponent,
     ContactoComponent,
     RegistroComponent,
+    IniciarComponent,
   ],
   imports: [
     BrowserModule,
