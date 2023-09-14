@@ -10,6 +10,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 //Mis componentes
 import { HeaderComponent } from './header/header.component';
@@ -46,6 +47,7 @@ import { CursoComponent } from './curso/curso.component';
     MatCardModule,
     MatGridListModule,
     MatFormFieldModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
