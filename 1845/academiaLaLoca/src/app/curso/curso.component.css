@@ -2,7 +2,7 @@ div{
     text-align: center;
 }
 
-.pepe{
+.contain{
     background-color: #d2f8fa;
     padding: 0.8em;
     margin-top: 0.8em;
@@ -11,4 +11,14 @@ div{
 
 p{
     margin-top: 0.8em;
+}
+
+.temario{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.asignaturas{
+    width: 50%;
+    margin: auto;
 }

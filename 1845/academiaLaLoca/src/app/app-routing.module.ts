@@ -8,7 +8,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { IniciarComponent } from './iniciar/iniciar.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CursoComponent } from './curso/curso.component';
-import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
+import { EditarCursoComponent } from './editar-curso/editar-curso.component';
 import { MostrarCursosComponent } from './mostrar-cursos/mostrar-cursos.component';
 
 
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'iniciar', component: IniciarComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'curso', component:CursoComponent},
-  {path: 'editar-cursos', component: ListaCursosComponent},
+  {path: 'editar-cursos', component: EditarCursoComponent},
   {path: 'mostrar-cursos', component: MostrarCursosComponent},
 ];
 

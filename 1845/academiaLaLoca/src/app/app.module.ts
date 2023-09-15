@@ -19,14 +19,14 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { RegistroComponent } from './registro/registro.component';
 import { IniciarComponent } from './iniciar/iniciar.component';
 import { CursosComponent } from './cursos/cursos.component';
-import { ListaCursosComponent } from './lista-cursos/lista-cursos.component';
 import { MostrarCursosComponent } from './mostrar-cursos/mostrar-cursos.component';
 import { HomeComponent } from './home/home.component';
 import { CursoComponent } from './curso/curso.component';
+import { EditarCursoComponent } from './editar-curso/editar-curso.component';
 
 
 @NgModule({
-  declarations: [		
+  declarations: [			
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -35,9 +35,9 @@ import { CursoComponent } from './curso/curso.component';
     IniciarComponent,
     CursosComponent,
     MostrarCursosComponent,
-    ListaCursosComponent,
-      HomeComponent,
-      CursoComponent
+    HomeComponent,
+    CursoComponent,
+    EditarCursoComponent
    ],
   imports: [
     BrowserModule,
