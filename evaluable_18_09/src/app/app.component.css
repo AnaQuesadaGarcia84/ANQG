@@ -1,0 +1,17 @@
+nav{
+    background-color: lightblue;
+    padding: 0.8em;
+}
+
+ul{
+    list-style: none;
+    text-align: end;
+}
+
+li a{
+    text-decoration: none;
+    color: #05053b;
+    font-size: 1.3em;
+    
+}
+

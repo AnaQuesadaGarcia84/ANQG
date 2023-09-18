@@ -1,0 +1,24 @@
+div{
+    text-align: center;
+}
+
+input, textarea{
+    padding: 0.8em;
+    width: 25%;
+    margin-top: 0.3em;
+    text-align: center;
+    border-radius: 0.3em;
+    font-size: 0.9em;
+}
+
+.boton{
+    background-color: #05053b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.boton:hover{
+    box-shadow: black 3px 3px 3px;
+    background-color: lightblue;
+    color: #05053b;
+}
