@@ -1,26 +1,20 @@
-const express=require('express')
+const express = require('express')
+const mongoose = require('mongoose')
+const conectarDB = require('./config/db')
+const cors = require("cors")
 
-const cursoRouters= require('./routes/evaluable')
-
+// Creamos el servidor
 const app = express()
 
-const port = 3700
+conectarDB();
+app.use(cors())
 
-app.listen(port,()=>{
-    console.log('La aplicación está en línea...')
+app.use(express.json());
+
+app.use('/api/cursos', require('./app/routes/cursoroutes'));
+
+app.listen(3700, () => {
+    console.log('El servidor esta corriendo perfectamente')
 })
-
-
-//Conexión con la base de datos
-const mongoose=require('mongoose')
-
-mongoose.Promise= global.Promise
-mongoose.connect('mongodb://127.0.0.1:27017/Evaluable11_9', {
-    useNewUrlParser:true,
-})
-.then(()=>{
-    console.log('Conexión establecida...')
-})
-.catch(err => console.log(err))
 
 
