@@ -1,15 +1,26 @@
 const mongoose = require('mongoose')
 
-const evaluableSchema = new mongoose.Schema(
-    {
-      _id: String,
-      user: String,
-      idTarea: String,
-      descripcionTarea: String,
-      puntuacion: Number,
-      estado: String
+const evaluableSchema = mongoose.Schema({
+  user: {
+    type: String,
+    required: true
+  },
+  idTarea:{
+    type: String,
+    required: true
+  },
+  descripcionTarea:{
+    type: String,
+    required: true
+  },
+  puntuacion:{
+    type: Number,
+    required: true
+  },
+  estado:{
+    type: String,
+    required: true
+  }
+})
 
-    }
-)
-
-module.exports= mongoose.model('tareas', evaluableSchema)
+module.exports= mongoose.model('Tareas', evaluableSchema)
