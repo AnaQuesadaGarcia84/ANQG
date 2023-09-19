@@ -12,6 +12,8 @@ app.use(cors())
 //Conexiones externas
 app.use(express.json())
 
+app.use('/api/usuario', require('./routes/usuarioRoutes'))
+
 app.listen(3700, () =>{
     console.log('El servidor está conectado')
 })
