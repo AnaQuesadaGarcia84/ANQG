@@ -1,4 +1,4 @@
-const mongoose= ('mongoose')
+const mongoose= require('mongoose')
 
 const usuarioSchema = mongoose.Schema({
     nombre:{
@@ -48,5 +48,5 @@ const usuarioSchema = mongoose.Schema({
     
 })
 
-module.exports = mongoose.model('Usuario'. usuarioSchema)
+module.exports = mongoose.model('Usuario', usuarioSchema)
 
