@@ -8,6 +8,8 @@ import { Curso } from '../modelos/cursosModelos';
 })
 export class CursosService {
 
+  url= 'http://localhost:3700/api/cursos'
+
 constructor() { }
 
 }
