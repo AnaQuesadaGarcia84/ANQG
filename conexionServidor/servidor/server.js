@@ -13,6 +13,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/api/usuario', require('./routes/usuarioRoutes'))
+app.use('/api/curso', require('./routes/cursoRoutes'))
 
 app.listen(3700, () =>{
     console.log('El servidor está conectado')

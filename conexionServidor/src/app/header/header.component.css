@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    background-color: lightblue;
+}
+
+.logo{
+    width: 10%;
+    text-align: center;
+    margin-top: 0.8em;
+}
+
+.logo img{
+    width: 60%;
+}
+
+nav{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: end; 
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline-block;
+}
+
+li a{
+    text-decoration: none;
+    margin-right: 0.5em;
+    font-size: 1.3em;
+    color: #0D3F7D;
+}
+
+
+
