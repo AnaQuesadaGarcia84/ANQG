@@ -1,23 +1,21 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
-const conectarDB = require('./db')
+const conectarDB = require('./config/db')
+const cors = require("cors")
 
+// Creamos el servidor
 const app = express()
 
-conectarDB()
-
-//Conexiones internas
+// Conectamos DB appweb
+conectarDB();
 app.use(cors())
-//Conexiones externas
-app.use(express.json())
 
-app.use('/api/usuario', require('./routes/usuarioRoutes'))
-app.use('/api/curso', require('./routes/cursoRoutes'))
+app.use(express.json());
 
-app.listen(3700, () =>{
-    console.log('El servidor está conectado')
+app.use('/api/cursos', require('./app/routes/cursoroutes'));
+app.use('/api/usuarios', require('./app/routes/usuarioroutes'));
+app.use('/api/mensajes', require('./app/routes/mensajeroutes'));
+
+app.listen(3700, () => {
+    console.log('El servidor esta corriendo perfectamente')
 })
-
-
-
