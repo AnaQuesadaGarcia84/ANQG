@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
+import { Global } from './global';
 import { Usuario } from '../modelos/usuariosModel';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class Save_UsuarioService {
 	constructor(
 		private _http: HttpClient
 	){
-		this.url = 'http://127.0.0.1:3700/';
+		this.url = Global.url;
 	}
 
 	testService(){
