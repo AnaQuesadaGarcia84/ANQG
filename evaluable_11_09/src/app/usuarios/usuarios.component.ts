@@ -16,9 +16,7 @@ export class UsuariosComponent implements OnInit {
     private toastr: ToastrService) {
 
   }
-  ngOnInit(): void {
-    this.obtenerUsuarios()
-  }
+  
   obtenerUsuarios() {
     this._usuarioService.getUsuarios().subscribe(data => {
       console.log(data);
@@ -26,6 +24,10 @@ export class UsuariosComponent implements OnInit {
     }, error => {
       console.log(error);
     })
+  }
+
+  ngOnInit(): void {
+    this.obtenerUsuarios()
   }
   eliminarCurso(id: any) {
     this._usuarioService.eliminarUsuario(id).subscribe(data => {
