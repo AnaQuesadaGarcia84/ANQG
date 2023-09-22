@@ -15,7 +15,7 @@ import { GcursoService } from '../servicios/gcurso.service'
 export class CrearCursoComponent implements OnInit {
 
   cursoForm: FormGroup;
-  titulo = 'Crear curso';
+  titulo = 'Crear Usuario';
   id: string | null;
   constructor(private fb: FormBuilder,
     private router: Router,
@@ -70,7 +70,7 @@ export class CrearCursoComponent implements OnInit {
 
   esEditar() {
     if (this.id !== null) {
-      this.titulo = 'Editar curso';
+      this.titulo = 'Editar Usuario';
       this._cursoService.obtenerCurso(this.id).subscribe(data => {
         this.cursoForm.setValue({
           nombre: data.nombre,

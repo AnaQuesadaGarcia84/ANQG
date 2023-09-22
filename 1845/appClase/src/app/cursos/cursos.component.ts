@@ -30,7 +30,7 @@ this.obtenerCursos()
   }
   eliminarCurso(id: any) {
     this._gcursoService.eliminarCurso(id).subscribe(data => {
-      this.toastr.error('El curso fue eliminado con exito' ,'Curso Eliminado');
+      this.toastr.error('El usuario fue eliminado con exito' ,'Usuario Eliminado');
       this.obtenerCursos();
     }, error => {
       console.log(error);

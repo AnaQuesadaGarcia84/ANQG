@@ -6,25 +6,25 @@
                     <span class="titulo">{{ titulo | uppercase }}</span>
                     <form class="mb-3" [formGroup]="cursoForm" (ngSubmit)="agregarCurso()">
                         <div class="mb-3">
-                            <input type="text" formControlName="nombre" class="form-control" placeholder="Curso">
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
                             <div class="text-danger" *ngIf="cursoForm.get('nombre')?.hasError('required') && cursoForm.get('nombre')?.touched">
                                 <span>El nombre es obligatorio</span>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" formControlName="descripcion" class="form-control" placeholder="Descripción">
+                            <input type="text" formControlName="descripcion" class="form-control" placeholder="Apellidos">
                             <div class="text-danger" *ngIf="cursoForm.get('descripcion')?.hasError('required') && cursoForm.get('descripcion')?.touched">
-                                <span>La descripción es obligatoria</span>
+                                <span>Los apellidos son obligatorios</span>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="text" formControlName="categoria" class="form-control" placeholder="Categoría">
+                            <input type="text" formControlName="categoria" class="form-control" placeholder="E-mail">
                             <div class="text-danger" *ngIf="cursoForm.get('categoria')?.hasError('required') && cursoForm.get('categoria')?.touched">
-                                <span>La Categoría es obligatoria</span>
+                                <span>El e-mail es obligatorio</span>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <input type="number" formControlName="duracion" class="form-control" placeholder="Duración">
+                            <input type="text" formControlName="duracion" class="form-control" placeholder="Teléfono">
                             <div class="text-danger" *ngIf="cursoForm.get('duracion')?.hasError('required') && cursoForm.get('duracion')?.touched">
                                 <span>La duración es obligatoria</span>
                             </div>

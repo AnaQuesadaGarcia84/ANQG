@@ -5,16 +5,15 @@
         <div class="w80">
             <div class="card">
                 <div class="card-body">
-                    <span class="titulo">LISTADO DE CURSOS</span>
+                    <span class="titulo">LISTADO DE USUARIOS</span>
                     <button class="btn btn-success float-end" routerLink="/crearCurso">NUEVO</button>
                     <table *ngIf="listCursos.length > 0" class="table">
                         <thead>
                           <tr>
-                            <th scope="col">Curso</th>
-                            <th scope="col">Descripción</th>
-                            <th scope="col">Categoría</th>
-                            <th scope="col">Duración</th>
-                            <th scope="col">Temas</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Teléfono</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -22,8 +21,7 @@
                             <th scope="row">{{curso.nombre}}</th>
                             <td>{{curso.descripcion}}</td>
                             <td>{{curso.categoria}}</td>
-                            <td>{{curso.duracion}} horas</td>
-                            <td>{{curso.temas}}</td>
+                            <td>{{curso.duracion}}</td>
                             <td><i [routerLink]="['/editarCurso', curso._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
                             <td><i (click)="eliminarCurso(curso._id)"class="fa-solid fa-trash text-danger"></i></td>
                           </tr>
