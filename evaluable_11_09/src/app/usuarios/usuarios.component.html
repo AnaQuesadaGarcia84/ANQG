@@ -1,3 +1,32 @@
-<p>
-  usuarios works!
-</p>
+<div class="container mt5">
+  <div class="row">
+      <div class="w80">
+          <div class="card">
+              <div class="card-body">
+                  <span class="titulo">LISTADO DE CURSOS</span>
+                  <button class="btn btn-success float-end" routerLink="/crearUsuario">NUEVO</button>
+                  <table *ngIf="listaUsuarios.length > 0" class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">E-mail</th>
+                          <th scope="col">Teléfono</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let usuario of listaUsuarios">
+                          <th scope="row">{{usuario.nombre}}</th>
+                          <td>{{usuario.apellidos}}</td>
+                          <td>{{usuario.email}}</td>
+                          <td>{{usuario.telefono}}</td>
+                          <td><i [routerLink]="['/editarUsuario', usuario._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
+                          <td><i (click)="eliminarCurso(usuario._id)"class="fa-solid fa-trash text-danger"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
