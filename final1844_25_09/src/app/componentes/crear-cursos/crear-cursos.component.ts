@@ -1,6 +1,6 @@
 // Módulos y Librerías
 import { Component, OnInit  } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -50,19 +50,19 @@ export class CrearCursosComponent implements OnInit{
         temas: this.cursoForm.get('temas')?.value
       }
   
-      if(this.id !== null){
+      if (this.id !== null) {
         // Editamos Curso
-        this._cursoService.editarCurso(this.id, CURSO).subscribe(data =>{
+        this._cursoService.editarCurso(this.id, CURSO).subscribe(data => {
           this.toastr.info('El curso fue actualizado con exito!', 'Curso Actualizado!');
           this.router.navigate(['/']);
         }, error => {
           console.log(error);
           this.cursoForm.reset();
         })
-      } else{
+      } else {
         // Agregamos Curso
         console.log(CURSO);
-          this._cursoService.guardarCurso(CURSO).subscribe(data => {
+        this._cursoService.guardarCurso(CURSO).subscribe(data => {
           this.toastr.success('El curso fue registrado con exito!', 'Curso Registrado!');
           this.router.navigate(['/']);
         }, error => {

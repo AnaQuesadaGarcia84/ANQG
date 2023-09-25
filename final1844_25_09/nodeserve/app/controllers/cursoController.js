@@ -1,4 +1,4 @@
-const Curso = require("../../models/CursoModel");
+const Curso = require("../models/CursoModel");
 
 exports.crearCurso = async (req, res) => {
     try {
@@ -23,7 +23,7 @@ exports.obtenerCursos = async (req, res) => {
 }
 exports.actualizarCurso = async (req, res) => {
     try {
-        const { nombre, descripcion, categoria, imagen, duracion, temas} = req.body;
+        const { nombre, descripcion, categoria, duracion, temas} = req.body;
         let curso = await Curso.findById(req.params.id);
         if(!curso) {
             res.status(404).json({ msg: 'No existe el Curso' })
@@ -31,7 +31,6 @@ exports.actualizarCurso = async (req, res) => {
         curso.nombre = nombre;
         curso.descripcion = descripcion;
         curso.categoria = categoria;
-        curso.imagen = imagen;
         curso.duracion = duracion;
         curso.temas = temas;
         curso = await Curso.findOneAndUpdate({ _id: req.params.id },curso, { new: true} )
@@ -41,7 +40,7 @@ exports.actualizarCurso = async (req, res) => {
         res.status(500).send('Hubo un error');
     }
 }
-exports.obtenerCurso = asyn (req, res) => {
+exports.obtenerCurso = async (req, res) => {
     try {
         let curso = await Curso.findById(req.params.id);
         if(!curso) {
