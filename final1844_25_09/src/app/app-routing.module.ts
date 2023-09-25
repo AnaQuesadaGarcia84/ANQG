@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './componentes/home/home.component'
 import { CrearCursosComponent } from './componentes/crear-cursos/crear-cursos.component';
 import { ListarCursosComponent } from './componentes/listar-cursos/listar-cursos.component';
-import { ContactoComponent } from './componentes/contacto/contacto.component'
+import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CursoComponent} from './componentes/curso/curso.component'
 
 
