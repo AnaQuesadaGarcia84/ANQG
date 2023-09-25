@@ -13,7 +13,7 @@ export class GmensajeService {
   constructor(private http: HttpClient) { }
 
     getMensajes(): Observable<any>{
-    return this.http.gets(this.url)
+    return this.http.get(this.url)
     }
     eliminarMensaje(id: string): Observable<any> {
     return this.http.delete(this.url + id);

@@ -5,7 +5,7 @@ const mensajeController = require('../controllers/mensajeController');
 
 // api/cursos
 router.post('/', mensajeController.crearMensaje);
-router.get('/', mensajeController.obtenermensaje);
+router.get('/', mensajeController.obtenerMensajes);
 router.put('/:id', mensajeController.actualizarMensaje);
 router.get('/:id', mensajeController.obtenerMensaje);
 router.delete('/:id', mensajeController.eliminarMensaje);
