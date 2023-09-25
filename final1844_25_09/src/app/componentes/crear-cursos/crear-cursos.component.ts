@@ -66,7 +66,7 @@ export class CrearCursosComponent implements OnInit{
           this.toastr.success('El curso fue registrado con exito!', 'Curso Registrado!');
           this.router.navigate(['/']);
         }, error => {
-          console.log(error);
+          // console.log(error);
           this.cursoForm.reset();
         })
       }
