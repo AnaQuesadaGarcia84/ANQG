@@ -1,0 +1,4 @@
+# Para que GIT ignore estos archivos al subir el proyecto a GIT
+ node_modules
+
+#  .env
