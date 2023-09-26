@@ -32,7 +32,11 @@ const UsuarioSchema = mongoose.Schema({
     fechaCreacion: {
         type: Date,
         default: Date.now()
-    }
+    },
+    anotaciones: {
+        type: String,
+        required: true
+    },
 });
 
 module.exports = mongoose.model('Usuario', UsuarioSchema);
