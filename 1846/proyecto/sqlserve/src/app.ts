@@ -3,6 +3,9 @@ import express from 'express';
 import cors from 'cors';
 // import {router} from './routes';
 
+//importamos la conexion con la base de datos
+import sequelize from './config/connectdb';
+
 const PORT = process.env.PORT || 3001;
 //Coneciones exteriores con express
 const app = express();
@@ -13,4 +16,12 @@ app.use(express.json());
 
 //Para poder llamar a una variable en el mensaje usamos estasas comillas:``
 app.listen(PORT, () => console.log(`Api conectada por el puerto ${PORT}`));
+
+try {
+    sequelize.authenticate();
+    console.log('La conexión con la Base de Datos es correcta');
+} catch (error) {
+    console.error('No se ha podido realizar la conexión con la base de datos', error)
+}
+
 
