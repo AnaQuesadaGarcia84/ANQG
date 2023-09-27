@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
-// import {router} from './routes';
+import router from './routes/CursoRoutes'
 
 //importamos la conexion con la base de datos
 import sequelize from './config/connectdb';
@@ -13,7 +13,7 @@ const app = express();
 //Conexiones dentro de la app con cors
 app.use(cors());
 app.use(express.json());
-
+app.use(router);
 //Para poder llamar a una variable en el mensaje usamos estasas comillas:``
 app.listen(PORT, () => console.log(`Api conectada por el puerto ${PORT}`));
 

@@ -7,25 +7,25 @@ export const getCursos = async (req: Request, res: Response) =>{
 }//Método GETCURSOS
 
 export const getCurso = async (req: Request, res: Response) =>{
-    const {id} = req.params;
-    const curso = await Curso.findByPk(id);
+    const {refcurso} = req.params;
+    const curso = await Curso.findByPk(refcurso);
 
     if(curso){
         res.json(curso)
     }
     else{
         res.status(404).json()
-        msg: `No existe un curso con el id: &{id}`
+        msg: `No existe un curso con el refcurso: &{refcurso}`
     }
 }//Método GETCURSO 
 
 export const deleteCurso = async (req: Request, res: Response) =>{
-    const {id} = req.params;
-    const curso = await Curso.findByPk(id);
+    const {refcurso} = req.params;
+    const curso = await Curso.findByPk(refcurso);
 
     if(!curso){
         res.status(404).json()
-        msg: `No existe un curso con el id: &{id}`
+        msg: `No existe un curso con el refcurso: &{refcurso}`
     }
     else{
         await curso.destroy();
@@ -53,10 +53,10 @@ export const postCurso = async (req: Request, res: Response) =>{
 
 export const updateCurso = async (req: Request, res: Response) =>{
     const {body} = req;
-    const {id} = req.params;
+    const {refcurso} = req.params;
 
     try {
-        const curso = await Curso.findByPk(id);
+        const curso = await Curso.findByPk(refcurso);
         if(curso){
             await curso.update(body);
             res.json({
@@ -65,7 +65,7 @@ export const updateCurso = async (req: Request, res: Response) =>{
         }
         else{
             res.status(404).json()
-            msg: `No existe un curso con el id: &{id}`
+            msg: `No existe un curso con el id: &{refcurso}`
         }
     } catch (error) {
         console.log(error);
