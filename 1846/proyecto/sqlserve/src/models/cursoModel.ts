@@ -2,9 +2,7 @@ import {DataTypes} from 'sequelize'
 import db from '../config/connectdb'
 
 const Curso = db.define('Curso',{
-    refcurso: {
-        type: DataTypes.NUMBER,
-    },
+  
     nombre: {
         type: DataTypes.STRING,
     },

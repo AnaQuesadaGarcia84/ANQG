@@ -6,6 +6,5 @@ export interface User{
     telefono: string;
     tipo: string;
     foto: string;
-    fechaCreacion: string;
     anotaciones: string;
 }
