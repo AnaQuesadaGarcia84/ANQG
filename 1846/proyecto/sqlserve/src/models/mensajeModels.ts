@@ -8,13 +8,10 @@ const Mensaje = db.define('Mensaje',{
     email: {
         type: DataTypes.STRING,
     },
-    telefono: {
-        type: DataTypes.STRING,
-    },
     asunto: {
         type: DataTypes.STRING,
     },
-    textomensaje: {
+    mensaje: {
         type: DataTypes.STRING,
     },
 

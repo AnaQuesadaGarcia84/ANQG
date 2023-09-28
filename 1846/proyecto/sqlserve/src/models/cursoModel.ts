@@ -12,15 +12,20 @@ const Curso = db.define('Curso',{
     categoria: {
         type: DataTypes.STRING,
     },
-    imagen: {
-        type: DataTypes.STRING,
-    },
     duracion: {
         type: DataTypes.NUMBER,
     },
     temas: {
         type: DataTypes.STRING,
     },
+    imagen: {
+        type: DataTypes.STRING,
+    },
+    fechaInicio: {
+        type: DataTypes.STRING,
+    },
+    
+    
     
 },{
     createdAt: false,

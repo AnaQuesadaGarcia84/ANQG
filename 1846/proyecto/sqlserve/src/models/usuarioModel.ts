@@ -8,21 +8,22 @@ const Usuario= db.define('Usuario',{
     apellidos: {
         type: DataTypes.STRING,
     },
-    Fnacimiento: {
+    fNacimiento: {
         type: DataTypes.STRING,
     },
     email: {
         type: DataTypes.STRING,
     },
-    telefono: {
+    foto: {
+        type: DataTypes.STRING,
+    },
+    pass: {
         type: DataTypes.STRING,
     },
     tipo: {
         type: DataTypes.STRING,
     },
-    foto: {
-        type: DataTypes.STRING,
-    },
+    
     anotaciones: {
         type: DataTypes.STRING,
     },
