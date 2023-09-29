@@ -8,6 +8,7 @@ import sequelize from './config/connectdb';
 import routerUsuario from './routes/UsuarioRoutes'
 import routerMensajes from './routes/MensajeRoutes';
 import routerCursos from './routes/CursoRoutes';
+import routerTareas from './routes/TareasRoutes';
 
 
 
@@ -21,6 +22,7 @@ app.use(express.json());
 app.use(routerUsuario);
 app.use(routerMensajes);
 app.use(routerCursos);
+app.use(routerTareas)
 
 //Para poder llamar a una variable en el mensaje usamos estasas comillas:``
 app.listen(PORT, () => console.log(`Api conectada por el puerto ${PORT}`));
