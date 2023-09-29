@@ -3,9 +3,8 @@ export interface Curso {
     descripcion:string, 
     categoria:string, 
     imagen: string, 
-    duracion: number, 
+    duracion: number,
+    fechaInicio: string, 
     temas:string
 }
 
-
-//nombre, descripcion, categoria, imagen, duracion, temas

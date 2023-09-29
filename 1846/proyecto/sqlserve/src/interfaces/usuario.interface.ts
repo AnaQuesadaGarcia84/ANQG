@@ -1,10 +1,10 @@
 export interface User{
     nombre: string;
     apellidos: string;
-    Fnacimiento: string;
+    fNacimiento: string;
     email: string;
-    telefono: string;
-    tipo: string;
     foto: string;
+    pass:string;
+    tipo: string;
     anotaciones: string;
 }
