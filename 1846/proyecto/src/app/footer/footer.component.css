@@ -6,14 +6,18 @@ footer{
     align-items: center;
 }
 
-.footer1, .footer3{
-    width: 33%;
+.footer1{
+    width: 25%;
 
 }
 .footer2{
-    width: 34%;
+    width: 20%;
+}
+
+.footer3{
+    width: 55%;
 }
 
 .logo{
-    width: 20%;
+    width: 30%;
 }
