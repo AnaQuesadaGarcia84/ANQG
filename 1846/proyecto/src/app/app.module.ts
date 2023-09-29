@@ -16,17 +16,19 @@ import { CrearCursosComponent } from './componentes/crear-cursos/crear-cursos.co
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CursoComponent } from './componentes/curso/curso.component';
 import { HomeComponent } from './componentes/home/home.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeaderComponent,
     ListarCursosComponent,
     CrearCursosComponent,
     HomeComponent,
     ContactoComponent,
-    CursoComponent
-  ],
+    CursoComponent,
+      FooterComponent
+   ],
   imports: [
     BrowserModule,
     FormsModule,

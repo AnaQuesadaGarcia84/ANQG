@@ -1,0 +1,19 @@
+footer{
+    display: flex;
+    text-align: center;
+    background-color: #a1c9f7;
+    padding: 0.8em;
+    align-items: center;
+}
+
+.footer1, .footer3{
+    width: 33%;
+
+}
+.footer2{
+    width: 34%;
+}
+
+.logo{
+    width: 20%;
+}
