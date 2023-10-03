@@ -1,10 +1,11 @@
-export interface User{
+import {Auth} from "./auth.interface"
+
+export interface UserInterface extends Auth{
     nombre: string;
     apellidos: string;
     fNacimiento: string;
-    email: string;
     foto: string;
-    pass:string;
     tipo: string;
     anotaciones: string;
 }
+
