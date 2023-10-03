@@ -13,11 +13,12 @@ const UserModel= db.define('Usuario',{
     },
     email: {
         type: DataTypes.STRING,
+        unique: true
     },
     foto: {
         type: DataTypes.STRING,
     },
-    pass: {
+    password: {
         type: DataTypes.STRING,
     },
     tipo: {
