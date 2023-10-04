@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr'
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,10 +15,15 @@ import { CrearCursosComponent } from './componentes/crear-cursos/crear-cursos.co
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CursoComponent } from './componentes/curso/curso.component';
 import { HomeComponent } from './componentes/home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './componentes/navbar/navbar.component'
+import { DashboardComponent } from './componentes/dashboard/dashboard.component'
+import { LoginComponent } from './componentes/login/login.component';
+import { SignInComponent } from './componentes/sign-in/sign-in.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component'
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeaderComponent,
     ListarCursosComponent,
@@ -27,8 +31,12 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ContactoComponent,
     CursoComponent,
-      FooterComponent
-   ],
+    NavbarComponent,
+    DashboardComponent,
+    LoginComponent,
+    SignInComponent,
+    SpinnerComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,

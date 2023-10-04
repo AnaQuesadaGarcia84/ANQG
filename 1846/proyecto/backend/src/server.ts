@@ -4,6 +4,7 @@ import routesUser from './routes/user';
 import routesCurso from './routes/CursoRoutes'
 import { User } from './models/UserModel';
 import Curso from './models/CursoModel'
+import sequelize from './db/connection';
 
 class Server {
     private app: Application;
@@ -40,10 +41,11 @@ class Server {
 
     async dbConnect() {
         try {
+            sequelize.authenticate()
             await User.sync()
             await Curso.sync()
         } catch (error) {
-            console.error('Unable to connect to the database:', error);
+            console.error('No se puede conectar con la Base de datos:', error);
         }
     }
 }
