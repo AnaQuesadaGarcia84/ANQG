@@ -1,14 +1,14 @@
 import {Request, Response} from 'express';
-import Usuario from '../models/usuarioModel';
+import {UserModel} from '../models/usuarioModel';
 
 export const getUsuarios = async (req: Request, res: Response) =>{
-    const listUsuario = await Usuario.findAll();
+    const listUsuario = await UserModel.findAll();
     res.json(listUsuario);
 }//Método GETUsuarios
 
 export const getUsuario = async (req: Request, res: Response) =>{
     const {id} = req.params;
-    const usuario = await Usuario.findByPk(id);
+    const usuario = await UserModel.findByPk(id);
 
     if(usuario){
         res.json(usuario)
@@ -21,7 +21,7 @@ export const getUsuario = async (req: Request, res: Response) =>{
 
 export const deleteUsuario = async (req: Request, res: Response) =>{
     const {id} = req.params;
-    const usuario = await Usuario.findByPk(id);
+    const usuario = await UserModel.findByPk(id);
 
     if(!usuario){
         res.status(404).json({
@@ -40,7 +40,7 @@ export const deleteUsuario = async (req: Request, res: Response) =>{
 export const postUsuario = async (req: Request, res: Response) =>{
     const {body} = req;
     try {
-        await Usuario.create(body);
+        await UserModel.create(body);
         res.json({
             msg: 'El usuario fue agregado con éxito!'
         })
@@ -57,7 +57,7 @@ export const updateUsuario = async (req: Request, res: Response) =>{
     const {id} = req.params;
 
     try {
-        const usuario = await Usuario.findByPk(id);
+        const usuario = await UserModel.findByPk(id);
         if(usuario){
             await usuario.update(body);
             res.json({
