@@ -1,7 +1,7 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../db/connection';
 
-export const User = sequelize.define('Usuario', {
+const Curso = sequelize.define('Curso',{
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -10,25 +10,16 @@ export const User = sequelize.define('Usuario', {
     nombre: {
         type: DataTypes.STRING
     },
-    apellidos: {
+    descripcion: {
         type: DataTypes.STRING
     },
-    Fnacimiento: {
+    categoria: {
         type: DataTypes.STRING
     },
-    email: {
-        type: DataTypes.STRING,
-        unique: true,
-        allowNull: false
+    duracion: {
+        type: DataTypes.INTEGER
     },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    telefono: {
-        type: DataTypes.STRING
-    },
-    tipo: {
+    temas: {
         type: DataTypes.STRING
     }
 }, {
@@ -36,4 +27,4 @@ export const User = sequelize.define('Usuario', {
     updatedAt: false
 });
 
-export default User;
+export default Curso;

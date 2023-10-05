@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: SignInComponent},
+  //canActivate: [Authguard] se usa para ocultar ese componente al usuario que no está logeado
   {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
   {path: 'crearcurso', component: CrearCursosComponent},
   {path: 'listarcursos', component: ListarCursosComponent},
