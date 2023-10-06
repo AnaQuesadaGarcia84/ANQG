@@ -1,0 +1,46 @@
+h2{
+    text-align: center;
+    margin-top: 0.8em;
+    font-size: 1.8em;
+}
+
+.contacto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen, .formulario{
+    width: 50%;
+}
+
+.imagen{
+    text-align: center;
+}
+
+form{
+    margin-top: 0.8em;
+}
+
+input, textarea, button{
+    width: 50%;
+    margin-top: 0.5em;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+button{
+    background-color: #448cd4;
+    border: #448cd4 solid 1px;
+}
+
+button:hover{
+    background-color: #132c41;
+    border: #0d1d2c solid 1px;
+    color: white;
+    box-shadow: black 5px 5px 5px;
+}
+
+

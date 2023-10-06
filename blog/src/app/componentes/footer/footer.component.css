@@ -1,0 +1,46 @@
+footer{
+    display: flex;
+    background-color: #448cd4;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-size: 1.2em;
+}
+
+.logoFooter{
+    width: 33%;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.medioFooter{
+    width: 33%;
+    text-align: center;
+    height: auto;
+}
+
+.navFooter{
+    width: 34%;
+}
+
+nav{
+    text-align: center;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+li a{
+    text-decoration: none;
+    padding: 0.8em;
+    color: white;
+}
+
+li a:hover{
+    background-color: #20C2F7;
+    color: #1e3b45;
+    border-radius: 0.8em;
+}
