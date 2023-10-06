@@ -21,6 +21,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { LoginComponent } from './componentes/login/login.component';
 import { SignInComponent } from './componentes/sign-in/sign-in.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component'
+import { ArchivoComponent } from './componentes/archivo/archivo.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SpinnerComponent } from './shared/spinner/spinner.component'
     DashboardComponent,
     LoginComponent,
     SignInComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ArchivoComponent,
   ],
   imports: [
     BrowserModule,

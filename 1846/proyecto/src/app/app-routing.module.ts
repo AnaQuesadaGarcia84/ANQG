@@ -11,6 +11,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { LoginComponent } from './componentes/login/login.component'
 import { SignInComponent } from './componentes/sign-in/sign-in.component'
 
+
 import { AuthGuard } from './utils/auth.guard'
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'editarCurso/:id', component: CrearCursosComponent},
   {path: 'contacto', component: ContactoComponent},
   {path: 'verCurso/:id', component: CursoComponent},
+
 
   {path: '**', redirectTo: 'login',pathMatch:'full'}
 ];

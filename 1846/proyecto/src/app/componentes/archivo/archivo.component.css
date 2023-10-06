@@ -1,0 +1,21 @@
+div{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.enviar{
+    margin-top: 0.8em;
+    background-color: lightblue;
+    padding: 0.5em;
+    width: 15%;
+    border-radius: 0.5em;
+    border : 1px solid #9fc6d3;
+    font-weight: bolder;
+}
+
+.enviar:hover{
+    background-color: #1b6f8b;
+    border: #155a70 1px solid;
+    color: white;
+    box-shadow: black 5px 5px 5px;
+}
