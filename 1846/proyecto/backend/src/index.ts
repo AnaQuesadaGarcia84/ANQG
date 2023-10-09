@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import Server from "./server";
+import Server from "./models/server";
 
 // Configuramos dotenv
 dotenv.config();

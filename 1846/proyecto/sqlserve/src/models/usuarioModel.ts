@@ -15,19 +15,22 @@ const UserModel= db.define('Usuario',{
         type: DataTypes.STRING,
         unique: true
     },
-    foto: {
+    // foto: {
+    //     type: DataTypes.STRING,
+    // },
+    password: {
         type: DataTypes.STRING,
     },
-    password: {
+    telefono: {
         type: DataTypes.STRING,
     },
     tipo: {
         type: DataTypes.STRING,
     },
     
-    anotaciones: {
-        type: DataTypes.STRING,
-    },
+    // anotaciones: {
+    //     type: DataTypes.STRING,
+    // },
 },{
     createdAt: false,
     updatedAt: false
