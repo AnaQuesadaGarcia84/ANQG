@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -48,7 +49,8 @@ import { ArchivoComponent } from './componentes/archivo/archivo.component';
     BrowserAnimationsModule,
     NgbModule,
     AppRoutingModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FileUploadModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
