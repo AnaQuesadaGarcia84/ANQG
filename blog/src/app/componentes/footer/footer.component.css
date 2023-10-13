@@ -12,6 +12,9 @@ footer{
     padding: 0.8em;
     text-align: center;
 }
+.logoFooter img{
+    width: 25%;
+}
 
 .medioFooter{
     width: 33%;
