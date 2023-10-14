@@ -11,9 +11,19 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
+//Mis componentes
+import { DefaultComponent } from './componentes/default/default.component';
+import { SidebarComponent } from './componentes/sidebar/sidebar.component';
+import { PepeComponent } from './componentes/pepe/pepe.component';
+
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DefaultComponent,
+    SidebarComponent,
+    PepeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +32,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatToolbarModule,
+    MatToolbarModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
