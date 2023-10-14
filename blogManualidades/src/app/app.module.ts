@@ -14,7 +14,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 //Mis componentes
 import { DefaultComponent } from './componentes/default/default.component';
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
-import { PepeComponent } from './componentes/pepe/pepe.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
 
 
@@ -23,7 +23,7 @@ import { PepeComponent } from './componentes/pepe/pepe.component';
     AppComponent,
     DefaultComponent,
     SidebarComponent,
-    PepeComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { PepeComponent } from './componentes/pepe/pepe.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
     
   ],
   providers: [],

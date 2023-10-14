@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-default',
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.css']
 })
-export class DefaultComponent implements OnInit {
+export class DefaultComponent implements AfterViewInit {
 
-  constructor() { }
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
 
-  ngOnInit() {
+  constructor(private observer: BreakpointObserver) { }
+
+  ngAfterViewInit() {
+    this.observer.observe(['(max-width: 800px)']).subscribe((rest)=> {
+      if (rest.matches) {
+        this.sidenav.mode = 'over';
+        this.sidenav.close();
+      } else {
+        this.sidenav.mode = 'side';
+        this.sidenav.open();
+      }
+    });
   }
 
 }

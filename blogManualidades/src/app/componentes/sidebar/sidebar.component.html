@@ -1,5 +1,43 @@
-<p>
-  sidebar works!
-</p>
+<div class="navbar">
+  <div class="top">
+    <mat-icon [inline]="true">notifications_none</mat-icon>
+  </div>
+  <!-- Cierre de TOP -->
+  <div class="user">
+    <img src="https://www.shareicon.net/data/200x200/2016/09/15/829452_user_512x512.png" alt="">
+    <h4 class="name">admin</h4>
+    <p class="mail">admin@gmail.com</p>
+  </div>
+  <!-- Cierre USER -->
+  <div class="menu">
+    <div class="menu-head">
+      <span>Dashboard</span>
+    </div>
+    <!-- Cierre del menu head -->
+    <div class="menu-item">
+      <button mat-button class="menu-button" [routerLink]="['/dashboard']">
+        <mat-icon>dashboard</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-button class="menu-button" [routerLink]="['/posts']">
+        <mat-icon>message</mat-icon>
+        <span>Posts</span>
+      </button>
+      <button mat-button class="menu-button">
+        <mat-icon>comment</mat-icon>
+        <span>Comentarios</span>
+      </button>
+      <button mat-button class="menu-button">
+        <mat-icon>pages</mat-icon>
+        <span>Páginas</span>
+      </button>
+      <button mat-button class="menu-button">
+        <mat-icon>settings</mat-icon>
+        <span>Herramientas</span>
+      </button>
+    </div>
+  </div>
+  <!-- Cierre de MENU -->
+</div>
 
 
