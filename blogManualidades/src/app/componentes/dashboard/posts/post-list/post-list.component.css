@@ -1,11 +1,35 @@
-mat-expansion-panel{
-    margin-top: 0.9em;
-    width: 98%;
+:host{
+    margin-top: 1rem;
+    display: block;
 }
 
-mat-expansion-panel-header{
+mat-expansion-panel{
+    margin-top: 0.9em;
+    width: 100%;
+}
+
+.title{
     background-color: lightblue;
     font-weight: bold;
     font-size: 1.2em;
 }
 
+.content{
+    font-weight: 500;
+}
+
+.date{
+    font-weight: 500;
+}
+
+#edit:hover{
+    cursor: pointer;
+    background-color: #16167a;
+    color: white;
+}
+
+#delete:hover{
+    cursor: pointer;
+    background-color: #770b0b;
+    color: white;
+}
