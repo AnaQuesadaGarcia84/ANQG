@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
+import { NgForm } from '@angular/forms';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post-create',
@@ -8,12 +9,19 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class PostCreateComponent implements OnInit {
 
-  constructor() { }
+  constructor(public postService: PostService) { }
 
   ngOnInit() {
   }
 
-  onPastAdded(){
-    alert('button-clicked')
+  onPastAdded(form: NgForm){
+    //Para no nos envíe un post sin contenido, ya que ambos campos son requeridos
+    if(form.invalid){
+      return;
+    }
+
+    //De esta manera publicamos el post en el desplegable
+    this.postService.addPost(form.value.title, form.value.content, form.value.dateTime);
+    form.resetForm();
   }  
 }
