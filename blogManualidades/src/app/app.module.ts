@@ -10,11 +10,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatInputModule} from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 //Mis componentes
 import { DefaultComponent } from './componentes/default/default.component';
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
 import { DashboardComponent } from './componentes/dashboard/dashboard.component';
+import { PostCreateComponent } from './componentes/dashboard/posts/post-create/post-create.component';
 
 
 
@@ -24,6 +27,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
     DefaultComponent,
     SidebarComponent,
     DashboardComponent,
+    PostCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,8 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
     MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    
+    MatInputModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

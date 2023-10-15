@@ -1,0 +1,11 @@
+<mat-card>
+  <form (submit)="onPastAdded()">
+    <mat-form-field>
+      <input type="text" name="title" matInput placeholder="Título del post">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea name="content" id="" cols="30" rows="10" matInput placeholder="Introduce contenido del post"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Guardar Post</button>
+  </form>
+</mat-card>
