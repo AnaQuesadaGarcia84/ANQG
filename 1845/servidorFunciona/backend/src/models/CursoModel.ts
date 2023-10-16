@@ -17,7 +17,7 @@ const Curso = sequelize.define('Curso',{
         type: DataTypes.STRING
     },
     duracion: {
-        type: DataTypes.NUMBER
+        type: DataTypes.INTEGER
     },
     temas: {
         type: DataTypes.STRING
