@@ -1,10 +1,13 @@
 <div>
   <p>Sube tu archivo a través de la interfaz de usuario de archivos</p>
-  <form action="">
-    <input class="file" type="file" (change)="getFile($event)" name="file" multiple />
-    <br/>
-    <input type="submit" value="Enviar" class="enviar">
-  </form>
+  <h3>Subir imagen</h3>
+      <input class="input-file" (change)="capturarFile($event)" type="file">
+        
+      <div class="wrapper-button" >
+          <button type="button" class="button" [disabled]="loading" (click)="subirArchivo()">
+              {{(loading) ? 'Cargando.....' : 'Subir Archivo'}}
+          </button>
+      </div>
 </div>
 
 

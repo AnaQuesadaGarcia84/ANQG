@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import routesUser from '../routes/user';
 import { routerFile } from '../routes/storage'
-import { User } from './user';
+import User from './UserModel';
 import  Archivo  from './storage'
 
 
