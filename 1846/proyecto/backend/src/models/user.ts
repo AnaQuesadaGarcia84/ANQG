@@ -1,13 +1,13 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../db/connection';
 
-export const User = sequelize.define('user', {
+export const User = sequelize.define('Usuario', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
-    username: {
+    email: {
         type: DataTypes.STRING,
         unique: true,
         allowNull: false
