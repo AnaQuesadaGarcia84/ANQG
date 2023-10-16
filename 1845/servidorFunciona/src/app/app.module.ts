@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr'
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -35,7 +35,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component'
     DashboardComponent,
     LoginComponent,
     SignInComponent,
-    SpinnerComponent
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +45,7 @@ import { SpinnerComponent } from './shared/spinner/spinner.component'
     BrowserAnimationsModule,
     NgbModule,
     AppRoutingModule,
+    RouterModule,
     ToastrModule.forRoot()
   ],
   providers: [],
