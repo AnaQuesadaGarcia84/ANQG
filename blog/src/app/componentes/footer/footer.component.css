@@ -2,7 +2,6 @@ footer{
     display: flex;
     background-color: #448cd4;
     align-items: center;
-    height: 100%;
     color: white;
     font-size: 1.2em;
 }
@@ -11,6 +10,9 @@ footer{
     width: 33%;
     padding: 0.8em;
     text-align: center;
+}
+.logoFooter img{
+    width: 25%;
 }
 
 .medioFooter{
