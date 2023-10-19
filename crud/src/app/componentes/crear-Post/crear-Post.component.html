@@ -7,27 +7,28 @@
           <form [formGroup]="postForm" (ngSubmit)="agregarPost()">
             <div class="mb-3">
               <input type="text" formControlName="titulo" class="form-control" placeholder="Título">
-              <div class="text-danger">
+              <div class="text-danger" *ngIf="postForm.get('titulo')?.hasError('required') && postForm.get('titulo')?.touched">
                 <span><b>El título del post es obligatorio</b></span>
               </div>
             </div>
             <div class="mb-3">
               <textarea class="form-control" formControlName="contenido" cols="30" rows="10" placeholder="Contenido del post"></textarea>
-              <div class="text-danger">
+              <div class="text-danger" *ngIf="postForm.get('contenido')?.hasError('required') && postForm.get('contenido')?.touched">
                 <span><b>El contenido del post es obligatorio</b></span>
               </div>
             </div>
-            <fieldset disabled>
-              <div class="mb-3">
-                <input type="text" formControlName="usuario" id="disabledTextInput" class="form-control" placeholder="Nombre usuario">
-              </div>
-              <div class="mb-3">
-                <input type="date" formControlName="fecha" id="disabledTextInput" class="form-control" placeholder="Fecha publicación">
-              </div>
-            </fieldset>
+            <select class="form-select mb-3" formControlName="categoria" aria-label="Default select example">
+              <option selected>Selecciona la categoría</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+            <div class="text-danger" *ngIf="postForm.get('categoria')?.hasError('required') && postForm.get('categoria')?.touched">
+              <span><b>La categoría del post es obligatoria</b></span>
+            </div>
             <div class="mb-3">
               <button routerLink="/" type="button" class="btn btn-secondary btn-lg float-start">Volver</button>
-              <button type="submit"  class="btn btn-success btn-lg float-end">Enviar</button>
+              <button type="submit" [disabled]="postForm.invalid" class="btn btn-success btn-lg float-end">Enviar</button>
             </div>
           </form>
         </div>

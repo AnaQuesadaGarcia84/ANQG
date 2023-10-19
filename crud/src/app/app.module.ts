@@ -1,9 +1,13 @@
+//Módulos de Angular
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-//Módulos de Angular
-import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//Módulos importados
+import { AppRoutingModule } from './app-routing.module';
+import { ToastrModule } from 'ngx-toastr';
+
 
 //Componente APP
 import { AppComponent } from './app.component';
@@ -23,6 +27,8 @@ import { ListarPostsComponent } from './componentes/listar-Posts/listar-Posts.co
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
