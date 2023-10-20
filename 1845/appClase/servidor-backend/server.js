@@ -8,9 +8,7 @@ const app = express()
 
 // Conectamos DB appweb
 conectarDB();
-app.use(cors())
 
-app.use(express.json());
 
 app.use('/api/cursos', require('./app/routes/cursoroutes'));
 app.use('/api/usuarios', require('./app/routes/usuarioroutes'));
